@@ -1,6 +1,6 @@
-## DDE Control Center
+# DDE Control Center
 
-The control center of deepin desktop environment 2.0 (DDE)
+The control center of Deepin Desktop Environment 2.0 (DDE)
 
 ## Dependencies
 
@@ -29,20 +29,30 @@ The control center of deepin desktop environment 2.0 (DDE)
 
 ## Installation
 
-~~~
+```
 mkdir build; cd build
 qmake ..
 make && make install
-~~~
+```
 
 ## Usage
 
 `dde-control-center show`
 
+## Getting help
+
+Any usage issues can ask for help via
+[Gitter](https://gitter.im/orgs/linuxdeepin/rooms)
+[IRC channel](https://webchat.freenode.net/?channels=deepin)
+[Forum](https://bbs.deepin.org)
+[WiKi](http://wiki.deepin.org/)
+
 ## Getting involved
 
-We encourage you to report issues and contribute changes. Please check out the [Contribution Guidelines](http://wiki.deepin.org/index.php?title=Contribution_Guidelines) about how to proceed.
+We encourage you to report issues and contribute changes
+[Contirubtion guide for users](http://wiki.deepin.org/index.php?title=Contribution_Guidelines_for_Users)
+[Contribution guide for developers](http://wiki.deepin.org/index.php?title=Contribution_Guidelines_for_Developers).
 
 ## License
 
-GNU General Public License, Version 3.0
+DDE Control Center is licensed under [GPLv3](LICENSE).
