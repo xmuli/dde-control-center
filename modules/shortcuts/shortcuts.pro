@@ -36,7 +36,8 @@ RESOURCES += \
 target.path = $${PREFIX}/lib/dde-control-center/modules/
 INSTALLS += target
 
-isEqual($$QMAKE_HOST.arch, mips64) | isEqual($$QMAKE_HOST.arch, mips32) | isEqual($$QMAKE_HOST.arch, sw_64) {
+ARCH = $$QMAKE_HOST.arch
+isEqual(ARCH, mips64) | isEqual(ARCH, mips32) | isEqual(ARCH, sw_64) {
     DEFINES += SHORTCUT_DISABLE_TERMINAL_QUAKE
     DEFINES += SHORTCUT_DISABLE_WM_SWITCHER
 }
