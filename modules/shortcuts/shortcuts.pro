@@ -36,6 +36,8 @@ RESOURCES += \
 target.path = $${PREFIX}/lib/dde-control-center/modules/
 INSTALLS += target
 
-!isEmpty(PLATFORM_SUNWAY) {
-    DEFINES += "PLATFORM_SUNWAY=YES"
+isEqual($$QMAKE_HOST.arch, mips64) | isEqual($$QMAKE_HOST.arch, mips32) | isEqual($$QMAKE_HOST.arch, sw_64) {
+    DEFINES += SHORTCUT_DISABLE_TERMINAL_QUAKE
+    DEFINES += SHORTCUT_DISABLE_WM_SWITCHER
 }
+

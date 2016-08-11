@@ -73,10 +73,10 @@ void Display::init()
     m_singleSettings->setFixedWidth(DCC::ModuleContentWidth);
     m_singleSettings->hide();
 
-#ifndef aARCH_MIPSEL
+#ifndef ARCH_MIPSEL
     updateUI();
 #else
-//    QTimer::singleShot(100, this, &Display::updateUI);
+    QTimer::singleShot(100, this, &Display::updateUI);
 #endif
 
     connect(m_dbusDisplay, &DisplayInterface::MonitorsChanged,

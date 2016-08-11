@@ -55,16 +55,15 @@ ShortcutDbus::ShortcutDbus(QObject *parent)
     list << "launcher" << "show-desktop" << "lock-screen" << "file-manager" << "screenshot"
          << "screenshot-window" << "screenshot-delayed"
          << "terminal"
-#if !defined(PLATFORM_SUNWAY) && !defined(ARCH_MIPSEL)
+#if !defined(SHORTCUT_DISABLE_TERMINAL_QUAKE)
          << "terminal-quake"
 #endif
          << "logout" << "switch-layout"
          << "preview-workspace" << "expose-windows" << "expose-all-windows"
          << "switch-group" << "switch-group-backward" << "switch-applications"
-#if !defined(PLATFORM_SUNWAY) && !defined(ARCH_MIPSEL)
-         << "switch-applications-backward" << "wm-switcher";
-#else
-         << "switch-applications-backward";
+         << "switch-applications-backward"
+#if !defined(SHORTCUT_DISABLE_WM_SWITCHER)
+         << "wm-switcher";
 #endif
 
     QDBusInterface dbus("com.deepin.daemon.InputDevice.InputDevices",
