@@ -63,8 +63,9 @@ ShortcutDbus::ShortcutDbus(QObject *parent)
          << "switch-group" << "switch-group-backward" << "switch-applications"
          << "switch-applications-backward"
 #if !defined(SHORTCUT_DISABLE_WM_SWITCHER)
-         << "wm-switcher";
+         << "wm-switcher"
 #endif
+         ;
 
     QDBusInterface dbus("com.deepin.daemon.InputDevice.InputDevices",
                         "/com/deepin/daemon/InputDevice/TouchPad",
