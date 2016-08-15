@@ -559,6 +559,11 @@
         <source>Browser</source>
         <translation>浏览器</translation>
     </message>
+    <message>
+        <location filename="../modules/default_applications/defaultapps.cpp" line="363"/>
+        <source>None</source>
+        <translation>无</translation>
+    </message>
 </context>
 <context>
     <name>DeviceFrame</name>

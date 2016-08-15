@@ -358,6 +358,19 @@ void DefaultApps::arrowLineExpandSetContent(QJsonArray json, int acategory, DArr
         m_list->addOption(option);
     }
 
+    if (appList.size() == 0) {
+        DOption *option = new DOption;
+        option->setName(tr("None"));
+        option->setValue("None");
+        option->setFixedHeight(30);
+        QPixmap pixmap(Helper::searchAppIcon(QStringList() << "media-autorun-nop" << "application-x-desktop", 16));
+        option->setIcon(pixmap.scaled(16, 16, Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
+        m_list->addOption(option);
+        m_list->blockSignals(true);
+        m_list->setCurrentSelected("None");
+        m_list->blockSignals(false);
+    }
+
     m_appsBtnList[category] = m_list;
 
     connect(m_list, &DOptionList::currentRowChanged, [ = ](int index) {
