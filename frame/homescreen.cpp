@@ -51,7 +51,7 @@ HomeScreen::HomeScreen(QWidget *parent) :
     DVBoxWidget *centerBox = new DVBoxWidget;
     centerBox->layout()->addLayout(m_grid);
 
-#ifndef ARCH_MIPSEL
+#ifndef DISABLE_LAZYLOAD_MODULE
     const QList<ModuleMetaData> pluginsList = m_pluginsManager->pluginsList();
     const int pluginsCount = pluginsList.count();
     for (int i(0); i != pluginsCount; ++i) {
@@ -159,7 +159,7 @@ HomeScreen::HomeScreen(QWidget *parent) :
     connect(m_userAvatar, &UserAvatar::clicked, [this] {emit moduleSelected("account");});
     connect(m_ctrHideAni, &QPropertyAnimation::finished, this, &QFrame::hide);
     connect(m_ctrShowAni, &QPropertyAnimation::finished, this, &HomeScreen::showAniFinished, Qt::QueuedConnection);
-#ifndef ARCH_MIPSEL
+#ifndef DISABLE_LAZYLOAD_MODULE
     connect(m_pluginsManager, &PluginsManager::pluginInserted, this, &HomeScreen::insertPlugin);
     connect(m_pluginsManager, &PluginsManager::pluginRemoved, this, &HomeScreen::removePlugin);
 #else

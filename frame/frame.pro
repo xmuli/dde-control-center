@@ -1,4 +1,4 @@
-QT += widgets dbus svg
+QT += widgets dbus svg concurrent
 
 HEADERS    = frame.h \
     homescreen.h \
@@ -59,6 +59,3 @@ isEqual(DCC_DISABLE_ANIMATION, YES){
     DEFINES += DCC_DISABLE_ANIMATION
 }
 
-isEqual(DCC_CACHE_MODULES, YES){
-    DEFINES += DCC_CACHE_MODULES
-}

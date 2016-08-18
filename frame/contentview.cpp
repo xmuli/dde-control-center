@@ -14,23 +14,31 @@
 #include <QProcess>
 #include <QTimer>
 #include <QElapsedTimer>
+#include <QtConcurrent>
+#include <QThread>
 
 #include "contentview.h"
 #include "sidebar.h"
 #include "constants.h"
 #include "controlcenterproxy.h"
 
+static void loadPluginModule(PluginLoader *loader, const ModuleMetaData &module)
+{
+    qDebug() << "begin load file" << module.path;
+    // TODO: maybe leak pluginLoader
+    QPluginLoader *pluginLoader = new QPluginLoader();
+    pluginLoader->setFileName(module.path);
+    QObject *instance = pluginLoader->instance();
+    qDebug() << "end load file" << module.path;
+    instance->moveToThread(qApp->thread());
+    emit loader->pluginLoad(module.id, instance);
+}
+
 void PluginLoader::runLoader()
 {
     foreach(ModuleMetaData module, list) {
-        qDebug() << "begin load file" << module.path;
-        QPluginLoader *pluginLoader = new QPluginLoader(this);
-        pluginLoader->setFileName(module.path);
-        QObject *instance = pluginLoader->instance();
-        qDebug() << "end load file" << module.path;
-        instance->moveToThread(qApp->thread());
-        emit pluginLoad(module.id, instance);
-        QThread::msleep(100);
+        QtConcurrent::run(loadPluginModule, this, module);
+        QThread::msleep(200);
     }
 }
 
@@ -209,7 +217,7 @@ QWidget *ContentView::loadModuleContent()
 
     qDebug() << "loadModuleContent" << module.id << "begin";
 
-#ifdef ARCH_MIPSEL
+#ifdef DISABLE_LAZYLOAD_MODULE
     emit m_pluginsManager->pluginLoaded(module);
 #endif
 
@@ -262,7 +270,7 @@ QWidget *ContentView::loadPlugin(ModuleMetaData module)
     qDebug() << "loadPlugin start";
 
 #ifdef DCC_CACHE_MODULES
-#ifndef ARCH_MIPSEL
+#ifndef DISABLE_LAZYLOAD_MODULE
     QPluginLoader *pluginLoader = new QPluginLoader(this);
     pluginLoader->setFileName(module.path);
     m_moduleCache[module.path] = pluginLoader->instance();
@@ -277,7 +285,7 @@ QWidget *ContentView::loadPlugin(ModuleMetaData module)
     m_moduleLoadQueue.push_back(QPair<ModuleMetaData, ModuleInterface *>(module, interface));
     QWidget *content = NULL;
 
-#ifdef ARCH_MIPSEL
+#ifdef DISABLE_LAZYLOAD_MODULE
     QTimer::singleShot(800, this, &ContentView::loadModuleContent);
 #else
     content = loadModuleContent();
@@ -306,7 +314,7 @@ void ContentView::onModuleSelected(ModuleMetaData meta)
     }
 
     // switch to another plugin
-#ifndef ARCH_MIPSEL
+#ifndef DISABLE_LAZYLOAD_MODULE
     switchToModule(meta);
 #else
     // prevent the UI from blocking, we choose to drop some

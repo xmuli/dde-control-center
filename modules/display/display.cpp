@@ -73,7 +73,7 @@ void Display::init()
     m_singleSettings->setFixedWidth(DCC::ModuleContentWidth);
     m_singleSettings->hide();
 
-#ifndef ARCH_MIPSEL
+#ifndef UI_THREAD_SLICE
     updateUI();
 #else
     QTimer::singleShot(100, this, &Display::updateUI);

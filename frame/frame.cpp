@@ -122,23 +122,23 @@ Frame::Frame(QWidget *parent) :
     setFocusPolicy(Qt::StrongFocus);
     setHideInLeft(false);
 
-#ifdef ARCH_MIPSEL
+#ifdef DISABLE_LAZYLOAD_MODULE
     setCursor(Qt::WaitCursor);
-    PluginLoader *rpc = new PluginLoader();
+    PluginLoader *pl = new PluginLoader();
     m_pluginLoadThread = new QThread(this);
-    rpc->list = PluginsManager::getInstance(this)->pluginsList();;
-    rpc->connect(m_pluginLoadThread, SIGNAL(started()), rpc, SLOT(runLoader()));
-    rpc->connect(rpc, SIGNAL(workFinished()), m_pluginLoadThread, SLOT(quit()));
-    rpc->connect(rpc, &PluginLoader::pluginLoad, m_contentView, &ContentView::loadPluginInstance);
-    rpc->connect(m_pluginLoadThread, SIGNAL(finished()), rpc, SLOT(deleteLater()));
-    rpc->connect(m_pluginLoadThread, SIGNAL(finished()), m_pluginLoadThread, SLOT(deleteLater()));
-    rpc->moveToThread(m_pluginLoadThread);
+    pl->list = PluginsManager::getInstance(this)->pluginsList();;
+    pl->connect(m_pluginLoadThread, &QThread::started, pl, &PluginLoader::runLoader);
+    pl->connect(pl, SIGNAL(workFinished()), m_pluginLoadThread, SLOT(quit()));
+    pl->connect(pl, &PluginLoader::pluginLoad, m_contentView, &ContentView::loadPluginInstance);
+    pl->connect(m_pluginLoadThread, SIGNAL(finished()), pl, SLOT(deleteLater()));
+    pl->connect(m_pluginLoadThread, SIGNAL(finished()), m_pluginLoadThread, SLOT(deleteLater()));
+    pl->moveToThread(m_pluginLoadThread);
 #endif
 }
 
 void Frame::loadContens()
 {
-#ifdef ARCH_MIPSEL
+#ifdef DISABLE_LAZYLOAD_MODULE
     m_pluginLoadThread->start();
     qDebug() << "plugin load thread" << m_pluginLoadThread << "started";
 

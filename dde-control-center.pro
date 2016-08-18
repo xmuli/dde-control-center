@@ -41,7 +41,7 @@ docs.files = docs/*
 
 INSTALLS = binary desktop service icons qm_files docs
 
-isEqual(ARCH_MIPSEL, YES){
+isEqual(AUTOSTART, TRUE){
     INSTALLS += autostart
 }
 

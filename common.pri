@@ -4,10 +4,16 @@ isEmpty(PREFIX){
     PREFIX = /usr
 }
 
+AUTOSTART = FALSE
 ARCH = $$QMAKE_HOST.arch
 isEqual(ARCH, mips64) | isEqual(ARCH, mips32) | isEqual(ARCH, sw_64) {
     DEFINES += ARCH_MIPSEL  #TODO: remove asap.
     DEFINES += DISABLE_DEVICE_MONITER
+    DEFINES += DCC_CACHE_MODULES
+    DEFINES += DISABLE_LAZYLOAD_MODULE
+    DEFINES += UI_THREAD_SLICE
+
+    AUTOSTART = TRUE
 }
 
 include(interfaces/interfaces.pri)
