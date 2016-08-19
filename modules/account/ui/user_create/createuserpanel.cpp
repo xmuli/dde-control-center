@@ -41,7 +41,7 @@ void CreateUserPanel::preDestroy()
 
 bool CreateUserPanel::eventFilter(QObject *obj, QEvent *event)
 {
-    if (event->type() == QEvent::WindowDeactivate) {
+    if (event->type() == QEvent::WindowDeactivate || event->type() == QEvent::HideToParent) {
         m_nameLine->hideWarning();
         m_passwdNew->hideWarning();
         m_passwdRepeat->hideWarning();

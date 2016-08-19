@@ -43,7 +43,11 @@ void DiskItem::updateData()
             m_diskIcon->setIcon(info.icon);
             m_diskIcon->setMountPoint(info.mountPoint);
             m_progressLabel->setText(bitToHuman(info.used) + "/" + bitToHuman(info.total));
-            m_usedBar->setValue(100 * (double(info.used) / info.total));
+            if (info.total != 0) {
+                m_usedBar->setValue(100 * (double(info.used) / info.total));
+            } else {
+                m_usedBar->setValue(0);
+            }
         }
     }
 }
