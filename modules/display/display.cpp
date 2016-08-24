@@ -25,7 +25,7 @@
 
 DisplayModule::DisplayModule()
 {
-    m_dbus = new DisplayInterface();
+    m_dbus = new DisplayInterface(this);
 }
 
 QFrame *DisplayModule::getContent()

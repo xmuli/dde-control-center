@@ -474,6 +474,7 @@ void CustomSettings::updateBrightnessLayout()
 
 void CustomSettings::onHasChangedChanged()
 {
+    QThread::msleep(300);
     if (m_dbusDisplay->hasChanged() || m_monitorGround->editing()) {
         m_applyButton->setText(tr("Apply"));
     } else {
