@@ -23,22 +23,30 @@
 #include "scrollframe.h"
 #include "constants.h"
 
+DisplayModule::DisplayModule()
+{
+    m_dbus = new DisplayInterface();
+}
+
 QFrame *DisplayModule::getContent()
 {
     qDebug() << "new Display begin";
     if (NULL == m_display) {
-        m_display = new Display(this);
+        m_display = new Display(m_dbus);
     }
     qDebug() << "new Display end";
     return m_display->getContent();
 }
 
-Display::Display(QObject *parent):
+Display::Display(DisplayInterface *dbus, QObject *parent):
     QObject(parent)
 {
     Q_UNUSED(QT_TRANSLATE_NOOP("ModuleName", "Display"));
     Q_INIT_RESOURCE(widgets_theme_dark);
     Q_INIT_RESOURCE(widgets_theme_light);
+
+    m_dbusDisplay = dbus;
+
     init();
 }
 
@@ -50,7 +58,6 @@ QFrame *Display::getContent()
 void Display::init()
 {
     m_frame = new ScrollFrame;
-    m_dbusDisplay = new DisplayInterface(m_frame);
     m_frame->setFixedWidth(DCC::ModuleContentWidth);
     m_frame->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding);
 

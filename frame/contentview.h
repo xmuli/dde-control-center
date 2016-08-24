@@ -99,4 +99,21 @@ public slots:
 
 };
 
+class SinglePluginLoader : public QObject
+{
+    Q_OBJECT
+public:
+    explicit SinglePluginLoader(QObject *parent = 0): QObject(parent) {;}
+    PluginLoader *loader;
+    ModuleMetaData module;
+
+signals:
+    void workFinished();
+    void pluginLoad(const QString &, QObject *);
+
+public slots:
+    void load();
+};
+
+
 #endif // CONTENTVIEW_H

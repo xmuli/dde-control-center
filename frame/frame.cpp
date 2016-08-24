@@ -138,7 +138,7 @@ Frame::Frame(QWidget *parent) :
 
     updateGeometry();
 
-#ifdef DISABLE_LAZYLOAD_MODULE
+#ifdef DCC_PRELOAD_MODULE_BACKEND
     setCursor(Qt::WaitCursor);
     PluginLoader *pl = new PluginLoader();
     m_pluginLoadThread = new QThread(this);
@@ -154,10 +154,14 @@ Frame::Frame(QWidget *parent) :
 
 void Frame::loadContens()
 {
-#ifdef DISABLE_LAZYLOAD_MODULE
+#ifdef DCC_PRELOAD_MODULE_BACKEND
     m_pluginLoadThread->start();
     qDebug() << "plugin load thread" << m_pluginLoadThread << "started";
+#endif
 
+#ifdef DCC_PRELOAD_HOME_UI
+    setCursor(Qt::ArrowCursor);
+#else
     PluginsManager *pm = PluginsManager::getInstance(this);
     connect(pm, &PluginsManager::pluginLoaded, [this, pm] {
         if (pm->count() == m_homeScreen->count())

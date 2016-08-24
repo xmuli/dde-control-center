@@ -35,7 +35,7 @@ class Display: public QObject
     Q_OBJECT
 
 public:
-    Display(QObject *parent = NULL);
+    Display(DisplayInterface *dbus, QObject *parent = NULL);
     QFrame *getContent();
 
 private slots:
@@ -61,10 +61,12 @@ class DisplayModule: public QObject, ModuleInterface
     Q_INTERFACES(ModuleInterface)
 
 public:
+    DisplayModule();
     QFrame *getContent() Q_DECL_OVERRIDE;
 
 private:
-    Display *m_display = NULL;
+    DisplayInterface    *m_dbus = NULL;
+    Display             *m_display = NULL;
 };
 
 #endif // DISPLAY_H

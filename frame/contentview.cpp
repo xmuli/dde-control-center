@@ -22,23 +22,41 @@
 #include "constants.h"
 #include "controlcenterproxy.h"
 
-static void loadPluginModule(PluginLoader *loader, const ModuleMetaData &module)
+void SinglePluginLoader::load()
 {
-    qDebug() << "begin load file" << module.path;
-    // TODO: maybe leak pluginLoader
+    qDebug() << QThread::currentThreadId() << "begin load file" << module.path;
     QPluginLoader *pluginLoader = new QPluginLoader();
     pluginLoader->setFileName(module.path);
     QObject *instance = pluginLoader->instance();
-    qDebug() << "end load file" << module.path;
     instance->moveToThread(qApp->thread());
-    emit loader->pluginLoad(module.id, instance);
+    qDebug() << QThread::currentThreadId() << "end load file" << module.path;
+    emit pluginLoad(module.id, instance);
+    emit workFinished();
 }
 
 void PluginLoader::runLoader()
 {
     foreach(ModuleMetaData module, list) {
-        QtConcurrent::run(loadPluginModule, this, module);
-        QThread::msleep(200);
+        qDebug() << "begin load file" << module.path;
+        QPluginLoader *pluginLoader = new QPluginLoader(this);
+        pluginLoader->setFileName(module.path);
+        QObject *instance = pluginLoader->instance();
+        qDebug() << "end load file" << module.path;
+        instance->moveToThread(qApp->thread());
+        emit pluginLoad(module.id, instance);
+        QThread::msleep(100);
+//        QThread *sl = new QThread;
+//        SinglePluginLoader *spl = new  SinglePluginLoader;
+//        spl->loader = this;
+//        spl->module = module;
+//        spl->moveToThread(sl);
+//        connect(sl, &QThread::started, spl, &SinglePluginLoader::load);
+//        connect(sl, &QThread::destroyed, spl, &SinglePluginLoader::deleteLater);
+//        connect(sl, &QThread::destroyed, sl, &QThread::deleteLater);
+//        connect(spl, &SinglePluginLoader::pluginLoad, this, &PluginLoader::pluginLoad);
+//        spl->load();
+//        sl->start();
+//        QThread::msleep(100);
     }
 }
 
@@ -194,7 +212,9 @@ void ContentView::loadPluginInstance(const QString &id, QObject *instance)
     if (!m_pluginsCache.contains(module.path)) {
         qDebug() << "main thread begin load" << module.id << instance;
         m_moduleCache[module.path] = instance;
-        m_pluginsCache[module.path] = loadPlugin(module);
+    #ifdef DCC_PRELOAD_MODULE_UI
+            m_pluginsCache[module.path] = loadPlugin(module);
+    #endif
     }
 #else
     Q_UNUSED(id);
@@ -217,7 +237,7 @@ QWidget *ContentView::loadModuleContent()
 
     qDebug() << "loadModuleContent" << module.id << "begin";
 
-#ifdef DISABLE_LAZYLOAD_MODULE
+#ifdef DCC_PRELOAD_MODULE_UI
     emit m_pluginsManager->pluginLoaded(module);
 #endif
 
@@ -285,7 +305,7 @@ QWidget *ContentView::loadPlugin(ModuleMetaData module)
     m_moduleLoadQueue.push_back(QPair<ModuleMetaData, ModuleInterface *>(module, interface));
     QWidget *content = NULL;
 
-#ifdef DISABLE_LAZYLOAD_MODULE
+#ifdef DCC_PRELOAD_MODULE_UI
     QTimer::singleShot(800, this, &ContentView::loadModuleContent);
 #else
     content = loadModuleContent();
@@ -313,20 +333,15 @@ void ContentView::onModuleSelected(ModuleMetaData meta)
         return;
     }
 
-    // switch to another plugin
-#ifndef DISABLE_LAZYLOAD_MODULE
-    switchToModule(meta);
-#else
+#ifdef DCC_DROP_SWITCH_REQUEST
     // prevent the UI from blocking, we choose to drop some
     // module-switch requests on slower machines.
     static QTimer *timer = nullptr;
-
     if (!timer) {
         timer = new QTimer(this);
         timer->setSingleShot(true);
-        timer->setInterval(500);
+        timer->setInterval(300);
     }
-
 
     timer->disconnect();
 
@@ -340,6 +355,9 @@ void ContentView::onModuleSelected(ModuleMetaData meta)
     }
 
     timer->start();
+#else
+    // switch to another plugin
+    switchToModule(meta);
 #endif
 }
 
