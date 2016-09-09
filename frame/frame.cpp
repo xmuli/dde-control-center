@@ -7,6 +7,8 @@
  * (at your option) any later version.
  **/
 
+#include <sys/mman.h>
+
 #include "frame.h"
 #include "homescreen.h"
 #include "contentview.h"
@@ -148,6 +150,12 @@ void Frame::loadContens()
         {
             QTimer::singleShot(5000, this, [ = ] {
                 setCursor(Qt::ArrowCursor);
+
+                QString deepinMlockall = QProcessEnvironment::systemEnvironment().value("DEEPIN_MLOCKALL");
+                if (deepinMlockall == "true") {
+                    qWarning()<< "call mlockall(MCL_CURRENT) to avoid swap";
+                    mlockall(MCL_CURRENT);
+                }
             });
         }
     });
