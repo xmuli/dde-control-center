@@ -158,7 +158,6 @@ void Display::updateUI()
         displayModeExpand->setTitle(tr("Display Mode"));
 
         // delete old pointer
-        delete m_widgetList;
         m_widgetList = new ListWidget;
         m_widgetList->setItemSize(DCC::ModuleContentWidth, 90);
 
