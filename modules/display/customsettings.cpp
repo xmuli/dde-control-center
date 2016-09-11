@@ -87,7 +87,7 @@ void CustomSettings::updateUI(const QList<MonitorInterface *> &list)
         brightnessList->setFixedHeight(brightnessList->height() - 2);
     });
 
-    if (m_dbusMonitors.count() > 1) {
+    if (m_dbusMonitors.count() > 0) {
         DArrowLineExpand *enableMonitor = new DArrowLineExpand;
         enableMonitor->setTitle(tr("Enable Monitor"));
         expandGroup->addExpand(enableMonitor);
@@ -133,6 +133,8 @@ void CustomSettings::updateUI(const QList<MonitorInterface *> &list)
 
         m_mainLayout->addWidget(enableMonitor);
         m_mainLayout->addWidget(m_primaryMonitor);
+
+        enableMonitor->setVisible(m_dbusMonitors.count() > 1);
     }
 
     DArrowLineExpand *resolutionExpand = new DArrowLineExpand;
