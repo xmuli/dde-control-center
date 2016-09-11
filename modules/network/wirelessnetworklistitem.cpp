@@ -361,7 +361,10 @@ void WirelessNetworkListItem::init()
 
         if(index_dialog >= 0)
             listWidget()->removeWidget(index_dialog, false);
+
+        QSize oldSize = m_ddialog->size();
         listWidget()->insertWidget(index + 1, m_ddialog.data());
+        m_ddialog->setFixedHeight(oldSize.height());
     });
     connect(m_dbusNetwork, &DBusNetwork::NeedSecretsFinished,
             this, [this](const QString &connPath, const QString &section) {
