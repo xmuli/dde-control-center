@@ -357,6 +357,10 @@ void Personalization::updateStandardFont(const QString &standardFont)
 {
     int sIndex = m_standardFonts.indexOf(standardFont);
 
+//    qDebug() << "set StandardFont Index"
+//             << sIndex << m_standardFontCombox->currentIndex()
+//             << standardFont << m_standardFontCombox->count();
+
     if (m_standardFontCombox->currentIndex() == sIndex) {
         return;
     }
@@ -375,6 +379,10 @@ void Personalization::updateStandardFont(const QString &standardFont)
 void Personalization::updateMonospaceFont(const QString &monospaceFont)
 {
     int mIndex = m_monospaceFonts.indexOf(monospaceFont);
+
+//    qDebug() << "set MonospaceFont Index"
+//             << mIndex << m_monospaceFontCombox->currentIndex()
+//             << monospaceFont << m_monospaceFontCombox->count();
 
     if (m_monospaceFontCombox->currentIndex() == mIndex) {
         return;
@@ -494,6 +502,10 @@ void Personalization::updateStandardFontCombox(const QStringList &standardFonts)
     foreach(QString family, standardFonts) {
         m_standardFontCombox->addFontItem(family);
     }
+
+    ///因为DFontComboBox的bug，初始化setCurrentIndex为0时会导致标题显示为空，必须手动先设置为其他值，再设为0方可解决
+    m_standardFontCombox->setCurrentIndex(-1);
+    m_standardFontCombox->setCurrentIndex(0);
 }
 
 
@@ -505,6 +517,10 @@ void Personalization::updateMonospaceFontCombox(const QStringList &monospaceFont
     foreach(QString family, monospaceFonts) {
         m_monospaceFontCombox->addFontItem(family);
     }
+
+    ///因为DFontComboBox的bug，初始化setCurrentIndex为0时会导致标题显示为空，必须手动先设置为其他值，再设为0方可解决
+    m_monospaceFontCombox->setCurrentIndex(-1);
+    m_monospaceFontCombox->setCurrentIndex(0);
 }
 
 void Personalization::handleDataFinished()
