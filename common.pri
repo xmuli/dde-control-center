@@ -21,5 +21,8 @@ isEqual(ARCH, mips64) | isEqual(ARCH, mips32)  {
     DEFINES += DCC_PRELOAD_MODULE_UI
     DEFINES += UI_THREAD_SLICE
 }
+isEqual(ARCH, sw_64)  {
+    DEFINES += DCC_DISABLE_MICROPHONE_FEEDBACK
+}
 
 include(interfaces/interfaces.pri)
