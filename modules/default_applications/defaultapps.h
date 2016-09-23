@@ -78,7 +78,6 @@ private:
     DBusDefaultMedia *m_dbusDefaultMedia;
 
     DExpandGroup *m_appGrp;
-    DExpandGroup *m_mediaGrp;
 
     DArrowLineExpand *m_modBrowser = nullptr;
     DArrowLineExpand *m_modMail = nullptr;
@@ -88,16 +87,19 @@ private:
     DArrowLineExpand *m_modPicture = nullptr;
     DArrowLineExpand *m_modTerminal = nullptr;
 
+#ifdef DCC_MEDIA_AUTOPLAY
+    DExpandGroup *m_mediaGrp;
     DArrowLineExpand *m_modCDAudio = nullptr;
     DArrowLineExpand *m_modDVDVideo = nullptr;
     DArrowLineExpand *m_modMusicPlayer = nullptr;
     DArrowLineExpand *m_modCamera = nullptr;
     DArrowLineExpand *m_modSoftware = nullptr;
+    DSwitchButton *m_autoPlaySwitch;
+#endif
 
     QMap<DefaultApps::DefaultAppsCategory, DOptionList *> m_appsBtnList;
     QMap<DefaultApps::DefaultAppsCategory, DArrowLineExpand *> m_taskMap;
 
-    DSwitchButton *m_autoPlaySwitch;
     QElapsedTimer m_timer;
 };
 

@@ -65,13 +65,16 @@ DefaultApps::DefaultApps(QObject *parent) :
     Q_INIT_RESOURCE(widgets_theme_dark);
     Q_INIT_RESOURCE(widgets_theme_light);
 
+//#ifdef  DCC_MEDIA_AUTOPLAY
     m_dbusDefaultMedia = new DBusDefaultMedia;
     DBusDefaultMediaThread *dbusConnetor = new DBusDefaultMediaThread(m_dbusDefaultMedia);
+
     QThread *dbusThread = new QThread;
     connect(dbusThread, &QThread::started, dbusConnetor, &DBusDefaultMediaThread::run);
     connect(dbusThread, &QThread::finished, dbusConnetor, &DBusDefaultMediaThread::deleteLater);
     connect(dbusThread, &QThread::finished, dbusThread, &QThread::deleteLater);
     dbusConnetor->moveToThread(dbusThread);
+//#endif
 
     m_centralWidget = new QFrame;
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -100,11 +103,16 @@ DefaultApps::DefaultApps(QObject *parent) :
     scrollContent->layout()->setMargin(0);
     scrollContent->setFixedWidth(DCC::ModuleContentWidth);
 
-    m_autoPlaySwitch = new DSwitchButton;
     DHeaderLine *defaultApps = new DHeaderLine;
-    DHeaderLine *autoPlayApplications = new DHeaderLine;
     m_appGrp = new DExpandGroup(this);
+
+#ifdef  DCC_MEDIA_AUTOPLAY
+    m_autoPlaySwitch = new DSwitchButton;
+    DHeaderLine *autoPlayApplications = new DHeaderLine;
     m_mediaGrp = new DExpandGroup(this);
+#endif
+
+    m_appGrp = new DExpandGroup(this);
     m_modBrowser = new DArrowLineExpand;
     m_modMail = new DArrowLineExpand;
     m_modText = new DArrowLineExpand;
@@ -112,15 +120,23 @@ DefaultApps::DefaultApps(QObject *parent) :
     m_modVideo = new DArrowLineExpand;
     m_modPicture = new DArrowLineExpand;
     m_modTerminal = new DArrowLineExpand;
+
+#ifdef  DCC_MEDIA_AUTOPLAY
+    m_autoPlaySwitch = new DSwitchButton;
+    DHeaderLine *autoPlayApplications = new DHeaderLine;
+    m_mediaGrp = new DExpandGroup(this);
     m_modCDAudio = new DArrowLineExpand;
     m_modDVDVideo = new DArrowLineExpand;
     m_modMusicPlayer = new DArrowLineExpand;
     m_modCamera = new DArrowLineExpand;
     m_modSoftware = new DArrowLineExpand;
-
     autoPlayApplications->setTitle(tr("AutoPlay"));
     autoPlayApplications->setContent(m_autoPlaySwitch);
+#endif
+
     defaultApps->setTitle(tr("Default Applications"));
+
+#ifdef  DCC_MEDIA_AUTOPLAY
     m_modSoftware->hide();
     m_modSoftware->setTitle(tr("Software"));
     m_modCamera->hide();
@@ -131,6 +147,8 @@ DefaultApps::DefaultApps(QObject *parent) :
     m_modDVDVideo->setTitle(tr("DVD Video"));
     m_modCDAudio->hide();
     m_modCDAudio->setTitle(tr("CD Audio"));
+ #endif
+
     m_modTerminal->setTitle(tr("Terminal"));
     m_modPicture->setTitle(tr("Picture"));
     m_modVideo->setTitle(tr("Video"));
@@ -148,13 +166,16 @@ DefaultApps::DefaultApps(QObject *parent) :
     scrollContent->layout()->addWidget(m_modVideo);
     scrollContent->layout()->addWidget(m_modPicture);
     scrollContent->layout()->addWidget(m_modTerminal);
+#ifdef DCC_MEDIA_AUTOPLAY
     scrollContent->layout()->addWidget(autoPlayApplications);
+
     scrollContent->layout()->addWidget(new DSeparatorHorizontal);
     scrollContent->layout()->addWidget(m_modCDAudio);
     scrollContent->layout()->addWidget(m_modDVDVideo);
     scrollContent->layout()->addWidget(m_modMusicPlayer);
     scrollContent->layout()->addWidget(m_modCamera);
     scrollContent->layout()->addWidget(m_modSoftware);
+#endif
     scrollContent->layout()->addStretch(1);
 
     qDebug() << "begin update";
@@ -167,8 +188,11 @@ DefaultApps::DefaultApps(QObject *parent) :
     dbusThread->start();
 
     connect(m_header, &ModuleHeader::resetButtonClicked, this, &DefaultApps::resetDefaults, Qt::QueuedConnection);
-    connect(m_autoPlaySwitch, &DSwitchButton::checkedChanged, this, &DefaultApps::setMediaOptionVisible);
     connect(&m_dbusDefaultApps, &DBusDefaultApps::Change, this, &DefaultApps::updateListCheckedIndex);
+#ifdef DCC_MEDIA_AUTOPLAY
+    connect(m_autoPlaySwitch, &DSwitchButton::checkedChanged, this, &DefaultApps::setMediaOptionVisible);
+    connect(m_autoPlaySwitch, &DSwitchButton::checkedChanged, this, &DefaultApps::setMediaOptionVisible);
+#endif
 }
 
 DefaultApps::~DefaultApps()
@@ -266,6 +290,7 @@ void DefaultApps::setMediaOptionVisible(const bool visible)
 {
     qDebug() << "reset visible to " << visible;
 
+#ifdef DCC_MEDIA_AUTOPLAY
     m_modCDAudio->setVisible(visible);
     m_modDVDVideo->setVisible(visible);
     m_modMusicPlayer->setVisible(visible);
@@ -273,7 +298,9 @@ void DefaultApps::setMediaOptionVisible(const bool visible)
     m_modSoftware->setVisible(visible);
 
     m_autoPlaySwitch->setChecked(visible);
+
     m_dbusDefaultMedia->EnableAutoOpen(visible);
+#endif
 }
 
 void DefaultApps::resetDefaults()
@@ -332,7 +359,9 @@ void DefaultApps::arrowLineExpandSetContent(QJsonArray json, int acategory, DArr
     const bool isMedia                          = isMediaApps(category);
     QJsonArray appList                          = json;
 
+#ifdef DCC_MEDIA_AUTOPLAY
     m_mediaGrp->addExpand(arrowLineApps);
+#endif
     arrowLineApps->setContent(m_list);
     m_list->setFixedWidth(DCC::ModuleContentWidth);
 
@@ -428,11 +457,13 @@ void DefaultApps::lazyLoad()
     m_taskMap.insert(Video, m_modVideo);
     m_taskMap.insert(Picture, m_modPicture);
     m_taskMap.insert(Terminal, m_modTerminal);
+#ifdef DCC_MEDIA_AUTOPLAY
     m_taskMap.insert(CD_Audio, m_modCDAudio);
     m_taskMap.insert(DVD_Video, m_modDVDVideo);
     m_taskMap.insert(MusicPlayer, m_modMusicPlayer);
     m_taskMap.insert(Camera, m_modCamera);
     m_taskMap.insert(Software, m_modSoftware);
+#endif
     createTask();
     qDebug() << "lazyLoad end";
 }
