@@ -125,8 +125,11 @@ void CustomSettings::updateUI(const QList<MonitorInterface *> &list)
                     checkedIndex = i;
                 }
             }
-            if (checkedIndex != -1)
+            if (checkedIndex != -1) {
+                m_primaryMonitorList->blockSignals(true);
                 m_primaryMonitorList->checkButtonByIndex(checkedIndex);
+                m_primaryMonitorList->blockSignals(false);
+            }
         }, Qt::DirectConnection);
 
         connect(m_primaryMonitorList, &DButtonList::buttonChecked, m_dbusDisplay, &DisplayInterface::SetPrimary);
