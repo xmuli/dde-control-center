@@ -97,7 +97,7 @@ void Personalization::initUI()
 void Personalization::initControllers()
 {
     m_dbusWorker = new DBusWorker;
-    m_workerThread = new QThread(this);
+    m_workerThread = new QThread();
     m_dbusWorker->moveToThread(m_workerThread);
     connect(m_workerThread, &QThread::finished, m_dbusWorker, &QObject::deleteLater);
     connect(this, &Personalization::dataRequested, m_dbusWorker, &DBusWorker::doWork);

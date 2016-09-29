@@ -196,7 +196,7 @@ int DBusWorker::getFontSize()
 void DBusWorker::setTheme(QString Type, QString Key)
 {
     if (!m_setThemeTimer) {
-        m_setThemeTimer = new QTimer(this);
+        m_setThemeTimer = new QTimer();
 
         connect(m_setThemeTimer, &QTimer::timeout, this, [this] {
             m_setThemeTimer->deleteLater();

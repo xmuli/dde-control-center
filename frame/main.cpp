@@ -7,7 +7,6 @@
  * (at your option) any later version.
  **/
 
-
 #include <gtk/gtk.h>
 
 #include <QApplication>
@@ -26,6 +25,8 @@
 #include <dthememanager.h>
 
 #include <DLog>
+
+#include <X11/Xlib.h>
 
 DUTIL_USE_NAMESPACE
 DWIDGET_USE_NAMESPACE
@@ -52,6 +53,9 @@ void onThemeChange(const QString &theme)
 
 int main(int argv, char *args[])
 {
+    setenv("QT_STYLE_OVERRIDE", "qt5", 1);
+
+    XInitThreads();
     gtk_init(&argv, &args);
 
     DApplication app(argv, args);

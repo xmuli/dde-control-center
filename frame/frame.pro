@@ -45,7 +45,7 @@ DESTDIR    = $$_PRO_FILE_PWD_/../
 
 CONFIG += c++11 link_pkgconfig
 LIBS += -L../widgets -lwidgets
-PKGCONFIG      += gtk+-2.0 dtkbase dtkutil dtkwidget
+PKGCONFIG += gtk+-2.0 dtkbase dtkutil dtkwidget x11
 
 RESOURCES += \
     qss.qrc \
