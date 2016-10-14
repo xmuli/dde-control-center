@@ -308,8 +308,8 @@ void DefaultApps::resetDefaults()
     qDebug() << "reset";
 
     m_dbusDefaultApps.Reset().waitForFinished();
-    m_dbusDefaultMedia->Reset().waitForFinished();
-    setMediaOptionVisible(m_dbusDefaultMedia->autoOpen());
+//    m_dbusDefaultMedia->Reset().waitForFinished();
+//    setMediaOptionVisible(m_dbusDefaultMedia->autoOpen());
 }
 
 void DefaultApps::updateListCheckedIndex()
@@ -325,11 +325,12 @@ void DefaultApps::updateListCheckedIndex()
     updateCheckedItem(Video);
     updateCheckedItem(Picture);
     updateCheckedItem(Terminal);
-    updateCheckedItem(CD_Audio);
-    updateCheckedItem(DVD_Video);
-    updateCheckedItem(MusicPlayer);
-    updateCheckedItem(Camera);
-    updateCheckedItem(Software);
+
+//    updateCheckedItem(CD_Audio);
+//    updateCheckedItem(DVD_Video);
+//    updateCheckedItem(MusicPlayer);
+//    updateCheckedItem(Camera);
+//    updateCheckedItem(Software);
 }
 
 void DefaultApps::updateCheckedItem(const DefaultApps::DefaultAppsCategory &category)
