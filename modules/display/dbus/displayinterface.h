@@ -210,6 +210,8 @@ public Q_SLOTS: // METHODS
 
     inline QDBusPendingReply<> SetPrimary(const QString &in0)
     {
+        qDebug() << "SetPrimary: " << in0;
+
         QList<QVariant> argumentList;
         argumentList << QVariant::fromValue(in0);
         return asyncCallWithArgumentList(QStringLiteral("SetPrimary"), argumentList);

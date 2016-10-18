@@ -294,7 +294,11 @@ void CustomSettings::updateUI(const QList<MonitorInterface *> &list)
         }, Qt::DirectConnection);
     }
     if (currentPrimaryIndex != -1)
+    {
+        m_primaryMonitorList->blockSignals(true);
         m_primaryMonitorList->checkButtonByIndex(currentPrimaryIndex);
+        m_primaryMonitorList->blockSignals(false);
+    }
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
 

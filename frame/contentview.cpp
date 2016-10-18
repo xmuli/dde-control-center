@@ -213,7 +213,9 @@ void ContentView::loadPluginInstance(const QString &id, QObject *instance)
         qDebug() << "main thread begin load" << module.id << instance;
         m_moduleCache[module.path] = instance;
     #ifdef DCC_PRELOAD_MODULE_UI
+        if (module.id != "display")
             m_pluginsCache[module.path] = loadPlugin(module);
+        emit m_pluginsManager->pluginLoaded(module);
     #endif
     }
 #else
@@ -236,10 +238,6 @@ QWidget *ContentView::loadModuleContent()
     ModuleInterface *m_interface = moduleInfo.second;
 
     qDebug() << "loadModuleContent" << module.id << "begin";
-
-#ifdef DCC_PRELOAD_MODULE_UI
-    emit m_pluginsManager->pluginLoaded(module);
-#endif
 
     if (!m_interface) {
         return content;
@@ -295,6 +293,12 @@ QWidget *ContentView::loadPlugin(ModuleMetaData module)
     pluginLoader->setFileName(module.path);
     m_moduleCache[module.path] = pluginLoader->instance();
 #endif
+    if (!m_pluginsCache.contains(module.path))
+    {
+        QPluginLoader *pluginLoader = new QPluginLoader(this);
+        pluginLoader->setFileName(module.path);
+        m_moduleCache[module.path] = pluginLoader->instance();
+    }
     QObject *instance = m_moduleCache[module.path];
 #else
     m_pluginLoader->setFileName(module.path);
