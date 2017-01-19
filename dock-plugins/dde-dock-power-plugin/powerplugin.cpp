@@ -89,16 +89,18 @@ QString PowerPlugin::getTitle(QString)
     if (!m_dbusPower->isValid())
         return getPluginName();
 
-
     QString batteryPercentage = QString("%1%").arg(QString::number(int(getBatteryPercentage())));
 
     if (!m_dbusPower->onBattery()) {
-        if (getBatteryState() == BatteryStateUnkonwn)
+        if (getBatteryState() == BatteryStateUnkonwn || getBatteryState() == BatteryStateFullyCharged || getBatteryPercentage() == 100)
             return tr("Charged");
         else
             return tr("On Charging %1").arg(batteryPercentage);
     } else {
-        return batteryPercentage;
+        if (getBatteryState() == BatteryStateFullyCharged)
+            return "100%";
+        else
+            return batteryPercentage;
     }
 }
 
