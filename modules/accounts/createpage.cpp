@@ -28,6 +28,7 @@ CreatePage::CreatePage(QWidget *parent) :
     m_password(new LineEditWidget),
     m_repeatpass(new LineEditWidget),
     m_buttonTuple(new ButtonTuple),
+    m_userType(new SwitchWidget),
     m_errorTip(new ErrorTip)
 {
     m_avatar->setFixedSize(90, 90);
@@ -40,6 +41,8 @@ CreatePage::CreatePage(QWidget *parent) :
     m_repeatpass->setTitle(tr("Repeat password"));
     m_repeatpass->setPlaceholderText(tr("Required"));
     m_repeatpass->textEdit()->setEchoMode(QLineEdit::Password);
+
+    m_userType->setTitle(tr("Administrator"));
 
     m_errorTip->setWindowFlags(Qt::ToolTip);
     m_errorTip->hide();
@@ -55,6 +58,7 @@ CreatePage::CreatePage(QWidget *parent) :
     m_group->appendItem(m_username);
     m_group->appendItem(m_password);
     m_group->appendItem(m_repeatpass);
+    m_group->appendItem(m_userType);
 
     TranslucentFrame *container = new TranslucentFrame;
 
@@ -129,6 +133,7 @@ void CreatePage::createUser()
     m_user->setName(m_username->text());
     m_user->setPassword(m_password->text());
     m_user->setRepeatPassword(m_repeatpass->text());
+    m_user->setType(m_userType->checked());
 
     emit requestCreateUser(m_user);
 }

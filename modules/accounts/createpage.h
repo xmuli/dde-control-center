@@ -17,7 +17,7 @@
 #include "lineeditwidget.h"
 #include "settingsgroup.h"
 #include "buttontuple.h"
-
+#include "switchwidget.h"
 #include "user.h"
 #include "creationresult.h"
 
@@ -72,6 +72,7 @@ private:
     dcc::widgets::LineEditWidget *m_password;
     dcc::widgets::LineEditWidget *m_repeatpass;
     dcc::widgets::ButtonTuple *m_buttonTuple;
+    dcc::widgets::SwitchWidget *m_userType;
 
     ErrorTip *m_errorTip;
 

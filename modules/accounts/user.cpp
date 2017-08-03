@@ -62,3 +62,17 @@ void User::setOnline(bool online)
 
     emit onlineChanged(online);
 }
+
+bool User::type() const
+{
+    return m_type;
+}
+
+void User::setType(bool admin)
+{
+    if (m_type == admin)
+        return;
+
+    m_type = admin;
+    emit typeChanged(admin);
+}

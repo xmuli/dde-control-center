@@ -245,6 +245,11 @@
         <source>Delete Account</source>
         <translation>删除帐户</translation>
     </message>
+    <message>
+        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="30"/>
+        <source>Administrator</source>
+        <translation>管理员</translation>
+    </message>
 </context>
 <context>
     <name>dcc::accounts::AccountsWidget</name>
@@ -289,6 +294,11 @@
         <location filename="../modules/accounts/createpage.cpp" line="35"/>
         <source>Username</source>
         <translation>用户名</translation>
+    </message>
+    <message>
+        <location filename="../modules/accounts/createpage.cpp" line="45"/>
+        <source>Administrator</source>
+        <translation>管理员</translation>
     </message>
     <message>
         <location filename="../modules/accounts/createpage.cpp" line="36"/>

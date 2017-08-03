@@ -231,22 +231,27 @@
 <context>
     <name>dcc::accounts::AccountsDetailWidget</name>
     <message>
-        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="23"/>
+        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="24"/>
         <source>Modify Avatar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="26"/>
+        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="27"/>
         <source>Modify Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="29"/>
+        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="30"/>
+        <source>Administrator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="34"/>
         <source>Auto Login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="33"/>
+        <location filename="../modules/accounts/accountsdetailwidget.cpp" line="38"/>
         <source>Delete Account</source>
         <translation type="unfinished"></translation>
     </message>
@@ -273,7 +278,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/accountsworker.cpp" line="230"/>
+        <location filename="../modules/accounts/accountsworker.cpp" line="240"/>
         <source>Password not match.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -281,49 +286,54 @@
 <context>
     <name>dcc::accounts::CreatePage</name>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="50"/>
+        <location filename="../modules/accounts/createpage.cpp" line="53"/>
         <source>Create</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="49"/>
+        <location filename="../modules/accounts/createpage.cpp" line="52"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="35"/>
+        <location filename="../modules/accounts/createpage.cpp" line="36"/>
         <source>Username</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="36"/>
-        <location filename="../modules/accounts/createpage.cpp" line="38"/>
-        <location filename="../modules/accounts/createpage.cpp" line="41"/>
+        <location filename="../modules/accounts/createpage.cpp" line="37"/>
+        <location filename="../modules/accounts/createpage.cpp" line="39"/>
+        <location filename="../modules/accounts/createpage.cpp" line="42"/>
         <source>Required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="37"/>
+        <location filename="../modules/accounts/createpage.cpp" line="38"/>
         <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="40"/>
+        <location filename="../modules/accounts/createpage.cpp" line="41"/>
         <source>Repeat password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="69"/>
+        <location filename="../modules/accounts/createpage.cpp" line="45"/>
+        <source>Administrator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../modules/accounts/createpage.cpp" line="73"/>
         <source>New Account</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="124"/>
+        <location filename="../modules/accounts/createpage.cpp" line="128"/>
         <source>Username can&apos;t be empty.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../modules/accounts/createpage.cpp" line="127"/>
+        <location filename="../modules/accounts/createpage.cpp" line="131"/>
         <source>Password can&apos;t be empty.</source>
         <translation type="unfinished"></translation>
     </message>

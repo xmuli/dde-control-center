@@ -46,7 +46,7 @@ public slots:
     void onUserListChanged(const QStringList &userList);
     void setPassword(User *user, const QString &passwd);
     void deleteUserIcon(User *user, const QString &iconPath);
-
+    void setAccountType(User *user, const bool value);
     void addUser(const QString &userPath);
     void removeUser(const QString &userPath);
 

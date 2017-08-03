@@ -17,6 +17,7 @@ AccountsDetailWidget::AccountsDetailWidget(User *user, QWidget *parent)
       m_accountSettings(new SettingsGroup),
       m_modifyAvatar(new NextPageWidget),
       m_modifyPassword(new NextPageWidget),
+      m_userType(new SwitchWidget),
       m_autoLogin(new SwitchWidget),
       m_deleteAccount(new QPushButton)
 {
@@ -25,6 +26,10 @@ AccountsDetailWidget::AccountsDetailWidget(User *user, QWidget *parent)
 
     m_modifyPassword->setTitle(tr("Modify Password"));
     m_accountSettings->appendItem(m_modifyPassword);
+
+    m_userType->setTitle(tr("Administrator"));
+    m_userType->setChecked(user->type());
+    m_accountSettings->appendItem(m_userType);
 
     m_autoLogin->setTitle(tr("Auto Login"));
     m_autoLogin->setChecked(user->autoLogin());
@@ -45,10 +50,12 @@ AccountsDetailWidget::AccountsDetailWidget(User *user, QWidget *parent)
 
     connect(user, &User::autoLoginChanged, m_autoLogin, &SwitchWidget::setChecked);
     connect(user, &User::onlineChanged, this, [this] (const bool online) { m_deleteAccount->setVisible(!online); });
+    connect(user, &User::typeChanged, m_userType, &SwitchWidget::setChecked);
     connect(m_deleteAccount, &QPushButton::clicked, this, &AccountsDetailWidget::deleteUserClicked);
     connect(m_autoLogin, &SwitchWidget::checkedChanged, [=] (const bool autoLogin) { emit requestSetAutoLogin(user, autoLogin); });
     connect(m_modifyPassword, &NextPageWidget::clicked, [=] { emit showPwdSettings(user); });
     connect(m_modifyAvatar, &NextPageWidget::clicked, [=] { emit showAvatarSettings(user); });
+    connect(m_userType, &SwitchWidget::checkedChanged, [=] (const bool type) {emit requestChangeUserType(user, type);});
 
     setContent(mainWidget);
     setTitle(user->name());

@@ -148,6 +148,14 @@ void AccountsWorker::deleteUserIcon(User *user, const QString &iconPath)
     userInter->DeleteIconFile(iconPath);
 }
 
+void AccountsWorker::setAccountType(User *user, const bool value)
+{
+    AccountsUser *userInter = m_userInters[user];
+    Q_ASSERT(userInter);
+
+    userInter->SetAccountType(value);
+}
+
 void AccountsWorker::addUser(const QString &userPath)
 {
     AccountsUser *userInter = new AccountsUser(AccountsService, userPath, QDBusConnection::systemBus(), this);
@@ -163,11 +171,13 @@ void AccountsWorker::addUser(const QString &userPath)
     connect(userInter, &AccountsUser::AutomaticLoginChanged, user, &User::setAutoLogin);
     connect(userInter, &AccountsUser::IconListChanged, user, &User::setAvatars);
     connect(userInter, &AccountsUser::IconFileChanged, user, &User::setCurrentAvatar);
+    connect(userInter, &AccountsUser::AccountTypeChanged, user, &User::setType);
 
     user->setName(userInter->userName());
     user->setAutoLogin(userInter->automaticLogin());
     user->setAvatars(userInter->iconList());
     user->setCurrentAvatar(userInter->iconFile());
+    user->setType(userInter->accountType());
 
     m_userInters[user] = userInter;
     m_userModel->addUser(userPath, user);
@@ -259,5 +269,7 @@ CreationResult *AccountsWorker::createAccountInternal(const User *user)
         return result;
     }
 
+    // set account type
+    userDBus->SetAccountType(user->type());
     return result;
 }

@@ -15,7 +15,11 @@
 #include <QStyle>
 
 DWIDGET_USE_NAMESPACE
+#ifdef DCORE_NAMESPACE
+DCORE_USE_NAMESPACE
+#else
 DUTIL_USE_NAMESPACE
+#endif
 
 static const QString getQssFromFile(const QString &name)
 {
