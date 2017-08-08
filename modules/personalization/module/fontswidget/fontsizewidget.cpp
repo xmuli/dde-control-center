@@ -16,7 +16,7 @@ FontSizeWidget::FontSizeWidget(QWidget *parent)
     m_sizeWidget = new TitledSliderItem(tr("Size"));
 
     m_sizeWidget->slider()->setType(DCCSlider::Vernier);
-    m_sizeWidget->slider()->setRange(0, 6);
+    m_sizeWidget->slider()->setRange(0, 4);
     m_sizeWidget->slider()->setTickPosition(QSlider::TicksBelow);
     m_sizeWidget->slider()->setTickInterval(1);
     m_sizeWidget->slider()->setPageStep(1);
