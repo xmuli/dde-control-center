@@ -2,6 +2,7 @@
 #include "powerwidget.h"
 #include "powerworker.h"
 #include "powermodel.h"
+#include <QGSettings>
 
 using namespace dcc;
 using namespace dcc::power;
@@ -10,7 +11,8 @@ PowerModule::PowerModule(FrameProxyInterface *frame, QObject *parent)
     : QObject(parent),
       ModuleInterface(frame),
 
-      m_powerWidget(nullptr)
+      m_powerWidget(nullptr),
+      m_powerAction(nullptr)
 {
 
 }
@@ -62,12 +64,33 @@ ModuleWidget *PowerModule::moduleWidget()
         connect(m_powerWidget, &PowerWidget::requestSetSleepOnLidClosed, m_powerWorker, &PowerWorker::setSleepOnLidClosed);
         connect(m_powerWidget, &PowerWidget::requestSetScreenBlackDelay, m_powerWorker, &PowerWorker::setScreenBlackDelay);
         connect(m_powerWidget, &PowerWidget::requestSetSleepDelay, m_powerWorker, &PowerWorker::setSleepDelay);
+        connect(m_powerWidget, &PowerWidget::requestSetDefaultPowerAction, this, &PowerModule::showPowerActionPage);
     }
 
     return m_powerWidget;
 }
 
+void PowerModule::showPowerActionPage()
+{
+    if (!m_powerAction) {
+        m_powerAction = new PowerAction;
+        connect(m_powerAction, &PowerAction::requestSelected, this, &PowerModule::setPowerAction);
+    }
+
+    QGSettings gsettings("com.deepin.dde.power");
+    m_powerAction->setDefault(gsettings.get("power-button-pressed-exec"));
+
+    m_frameProxy->pushWidget(this, m_powerAction);
+}
+
 const QString PowerModule::name() const
 {
     return QStringLiteral("power");
+}
+
+void PowerModule::setPowerAction(const QVariant &value)
+{
+    QGSettings gsettings("com.deepin.dde.power");
+    gsettings.set("power-button-pressed-exec", value);
+    m_powerAction->setDefault(gsettings.get("power-button-pressed-exec"));
 }

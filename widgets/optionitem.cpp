@@ -56,6 +56,11 @@ void OptionItem::setTitle(const QString &title)
     setAccessibleName(m_title);
 }
 
+void OptionItem::setValue(const QVariant &value)
+{
+    m_value = value;
+}
+
 void OptionItem::setTitleFixedHeight(int height)
 {
     m_titleFrame->setFixedHeight(height);

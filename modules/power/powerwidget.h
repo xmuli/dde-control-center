@@ -30,6 +30,7 @@ signals:
     void requestSetSleepOnLidClosed(const bool sleep) const;
     void requestSetScreenBlackDelay(const int delay) const;
     void requestSetSleepDelay(const int delay) const;
+    void requestSetDefaultPowerAction() const;
 
 private:
     QString delayToLiteralString(const int delay) const;

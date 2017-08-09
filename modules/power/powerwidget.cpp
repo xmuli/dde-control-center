@@ -7,6 +7,7 @@
 #include "dccslider.h"
 #include "dccsliderannotated.h"
 #include "optionitem.h"
+#include "nextpagewidget.h"
 
 using namespace dcc;
 using namespace dcc::widgets;
@@ -58,6 +59,16 @@ PowerWidget::PowerWidget()
     m_centralLayout->addWidget(m_sleepTimeoutSettings);
     m_centralLayout->addWidget(m_passwordSettings);
     m_centralLayout->addWidget(m_notebookSettings);
+
+    NextPageWidget *powerAction = new NextPageWidget;
+    powerAction->setTitle("设置默认电源行为");
+
+    SettingsGroup *grp = new SettingsGroup;
+    grp->appendItem(powerAction);
+
+    m_centralLayout->addWidget(grp);
+
+    connect(powerAction, &NextPageWidget::clicked, this, &PowerWidget::requestSetDefaultPowerAction);
 
     setTitle(tr("Power Management"));
 

@@ -6,6 +6,7 @@
 
 #include <QHBoxLayout>
 #include <QPointer>
+#include <QVariant>
 
 namespace dcc {
 namespace widgets {
@@ -20,6 +21,8 @@ public:
 
     void setTitle(const QString &title);
     const QString title() const { return m_title; }
+    void setValue(const QVariant &value);
+    inline const QVariant value() {return m_value;}
     void setTitleFixedHeight(int height);
     void setTitleWidget(QWidget *titleWidget);
     void setContentWidget(QWidget *contentWidget);
@@ -37,7 +40,7 @@ protected:
 protected:
     QString m_title;
     bool m_selected;
-
+    QVariant m_value;
     QVBoxLayout *m_mainLayout;
     QHBoxLayout *m_titleLayout;
     QWidget *m_titleFrame;
