@@ -355,9 +355,9 @@ void MonitorSettingDialog::updateModeList(const QList<Resolution> &modeList)
         if (first)
         {
             first = false;
-            m_resolutionsModel->appendOption(option + tr(" (Recommended)"));
+            m_resolutionsModel->appendOption(option + "_" + QString::number(r.rate()) + tr(" (Recommended)"));
         } else {
-            m_resolutionsModel->appendOption(option);
+            m_resolutionsModel->appendOption(option + "_" + QString::number(r.rate()));
         }
     }
 

@@ -52,9 +52,9 @@ void ResolutionDetailPage::setModel(DisplayModel *model)
         if (first)
         {
             first = false;
-            item->setTitle(res + tr(" (Recommended)"));
+            item->setTitle(res + "_" + QString::number(m.rate()) + tr(" (Recommended)"));
         } else {
-            item->setTitle(res);
+            item->setTitle(res + "_" + QString::number(m.rate()));
         }
 
         if (m == currentMode)
