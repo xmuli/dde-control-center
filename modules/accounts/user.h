@@ -16,9 +16,13 @@ public:
     explicit User(QObject *parent = 0);
 
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(QString fullname READ fullname WRITE setFullname NOTIFY fullnameChanged)
 
     const QString name() const;
     void setName(const QString &name);
+
+    const QString fullname() const { return m_fullname; }
+    void setFullname(const QString &fullname);
 
     inline bool autoLogin() const { return m_autoLogin; }
     void setAutoLogin(const bool autoLogin);
@@ -43,6 +47,7 @@ public:
 
 signals:
     void nameChanged(const QString &name) const;
+    void fullnameChanged(const QString &name) const;
     void currentAvatarChanged(const QString &avatar) const;
     void autoLoginChanged(const bool autoLogin) const;
     void avatarListChanged(const QList<QString> &avatars) const;
@@ -54,6 +59,7 @@ private:
     bool m_online;
     bool m_type;
     QString m_name;
+    QString m_fullname;
     QString m_password;
     QString m_repeatPassword;
     QString m_currentAvatar;
