@@ -34,11 +34,19 @@ void AccountsWidget::addUser(User *user)
 
     m_userGroup->appendItem(w);
 
-    connect(user, &User::nameChanged, w, &NextPageWidget::setTitle);
+    auto setFullName = [w] (const QString &fn)
+    {
+        if (!fn.isEmpty())
+            w->setTitle(fn);
+        else
+            w->setTitle("本地用户");
+    };
+
+    connect(user, &User::fullnameChanged, this, setFullName);
     connect(user, &User::currentAvatarChanged, w, &UserOptionItem::setAvatar);
     connect(w, &NextPageWidget::clicked, [=] { emit showAccountsDetail(user); });
 
-    w->setTitle(user->name());
+    setFullName(user->fullname());
     w->setAvatar(user->currentAvatar());
 }
 
