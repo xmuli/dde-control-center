@@ -13,6 +13,7 @@
 #include <DApplication>
 #include <DLog>
 #include <QStyle>
+#include <QTime>
 
 DWIDGET_USE_NAMESPACE
 #ifdef DCORE_NAMESPACE
@@ -205,6 +206,8 @@ int main(int argc, char *argv[])
     if (!positionalArgs.isEmpty())
         QTimer::singleShot(10, &f, [&] { f.showSettingsPage(positionalArgs.first(), QString()); });
 //        f.showSettingsPage(positionalArgs.first(), QString());
+
+    qsrand(QTime::currentTime().msecsSinceStartOfDay());
 
     return app.exec();
 }
