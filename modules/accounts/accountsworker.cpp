@@ -228,8 +228,10 @@ CreationResult *AccountsWorker::createAccountInternal(const User *user)
 {
     CreationResult *result = new CreationResult;
 
+    const QString tmpName(QString("u%1").arg(qrand()));
+
     // validate username
-    QDBusPendingReply<bool, QString, int> reply = m_accountsInter->IsUsernameValid(user->name());
+    QDBusPendingReply<bool, QString, int> reply = m_accountsInter->IsUsernameValid(tmpName);
     reply.waitForFinished();
     if (reply.isError()) {
         result->setType(CreationResult::UserNameError);
@@ -251,7 +253,7 @@ CreationResult *AccountsWorker::createAccountInternal(const User *user)
         return result;
     }
 
-    QDBusObjectPath path = m_accountsInter->CreateUser(user->name(), user->name(), 1);
+    QDBusObjectPath path = m_accountsInter->CreateUser(tmpName, user->name(), 1);
     const QString userPath = path.path();
     if (userPath.isEmpty() || userPath.isNull()) {
         result->setType(CreationResult::UnknownError);
