@@ -113,6 +113,7 @@ void AccountsWorker::setFullname(User *user, const QString &fullname)
 
 void AccountsWorker::deleteAccount(User *user, const bool deleteHome)
 {
+    qDebug() << "delete" << user->name();
     emit requestFrameAutoHide(false);
     m_accountsInter->DeleteUser(user->name(), deleteHome).waitForFinished();
     QTimer::singleShot(100, this, [=] { emit requestFrameAutoHide(true); });
@@ -228,7 +229,9 @@ CreationResult *AccountsWorker::createAccountInternal(const User *user)
 {
     CreationResult *result = new CreationResult;
 
-    const QString tmpName(QString("u%1").arg(qrand()));
+    qsrand(QDateTime::currentMSecsSinceEpoch());
+    const auto r = qrand();
+    const QString tmpName(QString("u%1").arg(r));
 
     // validate username
     QDBusPendingReply<bool, QString, int> reply = m_accountsInter->IsUsernameValid(tmpName);

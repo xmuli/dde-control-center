@@ -13,6 +13,7 @@
 namespace dcc {
 namespace accounts {
 
+class UserOptionItem;
 class AccountsWidget : public ModuleWidget
 {
     Q_OBJECT
@@ -32,6 +33,7 @@ private:
     dcc::widgets::SettingsGroup *m_userGroup;
 
     QPushButton *m_createBtn;
+    QMap<User*, UserOptionItem*> m_maps;
 };
 
 }   // namespace accounts

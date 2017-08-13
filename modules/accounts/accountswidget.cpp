@@ -48,16 +48,21 @@ void AccountsWidget::addUser(User *user)
 
     setFullName(user->fullname());
     w->setAvatar(user->currentAvatar());
+
+    m_maps[user] = w;
 }
 
 void AccountsWidget::removeUser(User *user)
 {
-    QList<NextPageWidget *> items = findChildren<NextPageWidget*>();
-    for (NextPageWidget *item : items) {
-        if (item->title() == user->name()) {
-            m_userGroup->removeItem(item);
-            item->deleteLater();
-            break;
-        }
-    }
+    m_userGroup->removeItem(m_maps[user]);
+    m_maps[user]->deleteLater();
+    m_maps.remove(user);
+//    QList<NextPageWidget *> items = findChildren<NextPageWidget*>();
+//    for (NextPageWidget *item : items) {
+//        if (item->title() == user->name()) {
+//            m_userGroup->removeItem(item);
+//            item->deleteLater();
+//            break;
+//        }
+//    }
 }
