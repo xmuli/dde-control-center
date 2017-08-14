@@ -16,11 +16,11 @@ ModifyFullNamePage::ModifyFullNamePage(User *u, QWidget *parent)
       m_user(u)
 {
     m_fullnameWidget = new LineEditWidget;
-    m_fullnameWidget->setTitle(tr("Fullname:"));
+    m_fullnameWidget->setTitle(tr("别名:"));
     m_fullnameWidget->textEdit()->setText(m_user->fullname());
 
     QPushButton *confirmBtn = new QPushButton;
-    confirmBtn->setText(tr("OK"));
+    confirmBtn->setText(tr("确认"));
 
     SettingsGroup *grp = new SettingsGroup;
     grp->appendItem(m_fullnameWidget);
@@ -35,7 +35,7 @@ ModifyFullNamePage::ModifyFullNamePage(User *u, QWidget *parent)
     centralWidget->setLayout(centralLayout);
 
     setContent(centralWidget);
-    setTitle(tr("Fullname Settings"));
+    setTitle(tr("别名设置"));
 
     connect(m_user, &User::fullnameChanged, this, &ModifyFullNamePage::onFullnameChanged);
     connect(confirmBtn, &QPushButton::clicked, this, [=] { emit requestSetFullname(m_user, m_fullnameWidget->textEdit()->text()); });

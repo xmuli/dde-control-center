@@ -25,7 +25,7 @@ AccountsDetailWidget::AccountsDetailWidget(User *user, QWidget *parent)
     m_modifyAvatar->setTitle(tr("Modify Avatar"));
     m_accountSettings->appendItem(m_modifyAvatar);
 
-    m_modifyFullname->setTitle(tr("Modify Fullname"));
+    m_modifyFullname->setTitle("修改别名");
     m_accountSettings->appendItem(m_modifyFullname);
 
     m_modifyPassword->setTitle(tr("Modify Password"));
