@@ -55,6 +55,7 @@ AccountsDetailWidget::AccountsDetailWidget(User *user, QWidget *parent)
     connect(user, &User::autoLoginChanged, m_autoLogin, &SwitchWidget::setChecked);
     connect(user, &User::onlineChanged, this, [this] (const bool online) { m_deleteAccount->setVisible(!online); });
     connect(user, &User::typeChanged, m_userType, &SwitchWidget::setChecked);
+    connect(user, &User::fullnameChanged, this, [=] { setTitle(user->fullname().isEmpty() ? "本地用户" : user->fullname()); });
     connect(m_deleteAccount, &QPushButton::clicked, this, &AccountsDetailWidget::deleteUserClicked);
     connect(m_autoLogin, &SwitchWidget::checkedChanged, [=] (const bool autoLogin) { emit requestSetAutoLogin(user, autoLogin); });
     connect(m_modifyPassword, &NextPageWidget::clicked, [=] { emit showPwdSettings(user); });
@@ -63,7 +64,7 @@ AccountsDetailWidget::AccountsDetailWidget(User *user, QWidget *parent)
     connect(m_modifyFullname, &NextPageWidget::clicked, [=] { emit showFullnameSettings(user); });
 
     setContent(mainWidget);
-    setTitle(user->name());
+    setTitle(user->fullname().isEmpty() ? "本地用户" : user->fullname());
     m_deleteAccount->setVisible(!user->online());
 }
 
