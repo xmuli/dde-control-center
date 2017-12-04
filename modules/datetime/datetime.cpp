@@ -132,8 +132,6 @@ void Datetime::addTimezone(const ZoneInfo &zone)
 {
     qDebug() << "user time zone added: " << zone;
 
-    if (zone.getZoneName() == QTimeZone::systemTimeZoneId()) return;
-
     TimezoneItem* item = new TimezoneItem;
 
     connect(item, &TimezoneItem::removeClicked, [this, item] {
@@ -144,7 +142,14 @@ void Datetime::addTimezone(const ZoneInfo &zone)
 
     item->setTimeZone(zone);
 
-    m_timezoneGroup->appendItem(item);
+    if (zone.getZoneName() != QTimeZone::systemTimeZoneId())
+        m_timezoneGroup->appendItem(item);
+
+    m_zoneList << item;
+
+    m_dialog->hide();
+
+    emit requestUnhold();
 
     m_headItem->setVisible(true);
     m_headItem->setEditEnable(true);
@@ -168,6 +173,7 @@ void Datetime::removeTimezone(const ZoneInfo &zone)
         if (item->timeZone().getZoneName() == zone.getZoneName()) {
             item->setVisible(false);
             m_timezoneGroup->removeItem(item);
+            m_zoneList.removeOne(item);
             item->deleteLater();
         } else {
             item->toNormalMode();
@@ -201,12 +207,22 @@ void Datetime::updateSystemTimezone(const QString &timezone)
     const QString locale = QLocale::system().name();
     const QString name = installer::GetLocalTimezoneName(timezone, locale);
     m_timezoneItem->setValue(name);
+
+    m_dialog->hide();
+
+    m_timezoneGroup->clear();
+    m_zoneList.clear();
+
+    m_timezoneGroup->appendItem(m_headItem);
+
+    addTimezones(m_model->userTimeZones());
+
+    emit requestUnhold();
 }
 
 void Datetime::onEditClicked(const bool &edit)
 {
-    QList<TimezoneItem*> items = findChildren<TimezoneItem*>();
-    for (TimezoneItem *item : items) {
+    for (TimezoneItem *item : m_zoneList) {
         if (edit) {
             item->toRemoveMode();
         } else {
