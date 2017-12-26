@@ -6,7 +6,7 @@ DEB_BUILD_ARCH ?= $(shell dpkg-architecture -qDEB_BUILD_ARCH)
 %:
 	dh $@ --parallel
 override_dh_auto_configure:
-	dh_auto_configure -- DCC_AUTO_EXIT=YES DCC_DISABLE_PLUGIN_WEATHER=YES DCC_DISABLE_PLUGIN_NOTIFY=YES
+	dh_auto_configure -- DCC_AUTO_EXIT=YES
 
 ifeq ($(DEB_BUILD_ARCH), mips64el)
 override_dh_auto_configure:
