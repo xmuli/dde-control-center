@@ -11,8 +11,7 @@ Frame::Frame(QWidget *parent)
     : DBlurEffectWidget(parent),
 
       m_allSettingsPage(nullptr),
-      m_allSettingsPageKiller(new QTimer(this)),
-
+      m_delayKillerTimer(new QTimer(this)),
       m_mouseAreaInter(new XMouseArea("com.deepin.api.XMouseArea", "/com/deepin/api/XMouseArea", QDBusConnection::sessionBus(), this)),
       m_displayInter(new DBusDisplay("com.deepin.daemon.Display", "/com/deepin/daemon/Display", QDBusConnection::sessionBus(), this)),
       m_launcherInter(new LauncherInter("com.deepin.dde.Launcher", "/com/deepin/dde/Launcher", QDBusConnection::sessionBus(), this)),
@@ -41,8 +40,8 @@ Frame::Frame(QWidget *parent)
     m_platformWindowHandle.setShadowColor(QColor(0, 0, 0, 255 * 0.5));
 //    m_platformWindowHandle.setShadowColor(Qt::red);
 
-    m_allSettingsPageKiller->setSingleShot(true);
-    m_allSettingsPageKiller->setInterval(60 * 1000);
+    m_delayKillerTimer->setSingleShot(true);
+    m_delayKillerTimer->setInterval(60 * 1000);
 
     setWindowFlags(Qt::X11BypassWindowManagerHint | Qt::WindowStaysOnTopHint);
     setAttribute(Qt::WA_TranslucentBackground, true);
@@ -51,7 +50,7 @@ Frame::Frame(QWidget *parent)
 
     resize(0, height());
 
-    connect(m_allSettingsPageKiller, &QTimer::timeout, this, &Frame::freeAllSettingsPage);
+    connect(m_delayKillerTimer, &QTimer::timeout, this, &Frame::onDelayKillerTimeout);
     connect(m_displayInter, &DBusDisplay::PrimaryRectChanged, this, &Frame::onScreenRectChanged);
     connect(m_launcherInter, &LauncherInter::Shown, this, &Frame::hide);
     connect(m_wmHelper, &DWindowManagerHelper::hasCompositeChanged, this, &Frame::adjustShadowMask);
@@ -162,8 +161,15 @@ void Frame::prepareAllSettingsPage()
     connect(m_allSettingsPage, &SettingsWidget::requestAutohide, this, &Frame::setAutoHide);
 }
 
-void Frame::freeAllSettingsPage()
+void Frame::onDelayKillerTimeout()
 {
+#ifdef DCC_AUTO_EXIT
+    if (isVisible())
+        return m_delayKillerTimer->start();
+    qWarning() << "Killer Timeout, now quiiting...";
+    qApp->quit();
+#else
+
 #ifndef DCC_KEEP_SETTINGS_LIVE
     Q_ASSERT(!m_allSettingsPage.isNull());
 
@@ -172,7 +178,9 @@ void Frame::freeAllSettingsPage()
         return;
 
     m_allSettingsPage->deleteLater();
-#endif
+#endif // DCC_KEEP_SETTINGS_LIVE
+
+#endif // DCC_AUTO_EXIT
 }
 
 void Frame::showAllSettings()
@@ -329,7 +337,7 @@ void Frame::show()
     connect(m_mouseAreaInter, &XMouseArea::ButtonRelease, this, &Frame::onMouseButtonReleased, Qt::UniqueConnection);
 
     // prepare all settings page
-    m_allSettingsPageKiller->stop();
+    m_delayKillerTimer->stop();
     QTimer::singleShot(m_frameWidgetStack.last()->animationDuration(), this, &Frame::prepareAllSettingsPage);
 }
 
@@ -371,7 +379,7 @@ void Frame::hide()
     disconnect(m_mouseAreaInter, &XMouseArea::ButtonRelease, this, &Frame::onMouseButtonReleased);
 
     // free all settings page
-    m_allSettingsPageKiller->start();
+    m_delayKillerTimer->start();
 }
 
 void Frame::toggle()

@@ -61,7 +61,7 @@ private slots:
     void setAutoHide(const bool autoHide);
 
     void prepareAllSettingsPage();
-    void freeAllSettingsPage();
+    void onDelayKillerTimeout();
     void showAllSettings();
     void contentDetached(QWidget * const c);
 
@@ -78,7 +78,7 @@ private:
 
 private:
     QPointer<SettingsWidget> m_allSettingsPage;
-    QTimer *m_allSettingsPageKiller;
+    QTimer *m_delayKillerTimer;
 
     XMouseArea *m_mouseAreaInter;
     DBusDisplay *m_displayInter;
