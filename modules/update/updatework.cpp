@@ -241,7 +241,8 @@ void UpdateWork::setDownloadJob(const QString &jobPath)
             m_downloadJob = nullptr;
 
             // install the updates immediately.
-            distUpgradeInstallUpdates();
+            if (!m_model->autoDownloadUpdates())
+                distUpgradeInstallUpdates();
         }
     });
 }
