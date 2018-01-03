@@ -47,7 +47,7 @@ KeyboardWork::KeyboardWork(KeyboardModel *model, QObject *parent)
     m_keyboardInter->setSync(false);
     m_keybindInter->setSync(false);
 #ifndef DCC_DISABLE_LANGUAGE
-    m_langSelector->setSync(false);
+    m_langSelector->setSync(false, false);
 #endif
 }
 
@@ -55,6 +55,8 @@ void KeyboardWork::active()
 {
     m_keyboardInter->blockSignals(false);
 #ifndef DCC_DISABLE_LANGUAGE
+    if (!m_langSelector->isValid())
+        m_langSelector->startServiceProcess();
     m_langSelector->blockSignals(false);
 #endif
     m_keybindInter->blockSignals(false);
