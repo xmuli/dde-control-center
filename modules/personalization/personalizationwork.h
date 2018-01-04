@@ -8,11 +8,12 @@
 #include <QMap>
 #include <QString>
 #include <QJsonObject>
-#include <com_deepin_daemon_apperance.h>
-#include <com_deepin_wm_switcher.h>
 
-using com::deepin::daemon::Appearance;
-using com::deepin::wm_switcher;
+#include <com_deepin_daemon_apperance.h>
+#include <com_deepin_wmswitcher.h>
+
+using Appearance = com::deepin::daemon::Appearance;
+using WMSwitcher = com::deepin::WMSwitcher;
 
 namespace dcc
 {
@@ -40,7 +41,7 @@ private slots:
     void onGetThemeFinished(QDBusPendingCallWatcher *w);
     void onGetPicFinished(QDBusPendingCallWatcher *w);
     void onRefreshedChanged(const QString &type);
-    void onToggleWM();
+    void onToggleWM(const QString &wm);
     void onGetCurrentWMFinished(QDBusPendingCallWatcher *w);
 
 private:
@@ -52,7 +53,7 @@ private:
 private:
     PersonalizationModel *m_model;
     Appearance           *m_dbus;
-    wm_switcher *m_wmSwitcher;
+    WMSwitcher *m_wmSwitcher;
 };
 }
 }
