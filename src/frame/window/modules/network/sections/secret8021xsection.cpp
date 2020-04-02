@@ -162,7 +162,7 @@ void Secret8021xSection::initStrMaps()
     };
 
     PasswordFlagsStrMap = {
-        //{tr("Saved"), NetworkManager::Setting::AgentOwned},
+        {tr("Agent"), NetworkManager::Setting::AgentOwned},
         {tr("Saved"), NetworkManager::Setting::None},
         {tr("Ask"), NetworkManager::Setting::NotSaved},
         {tr("Not Required"), NetworkManager::Setting::NotRequired}
