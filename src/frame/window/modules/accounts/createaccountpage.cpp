@@ -35,6 +35,7 @@
 #include <QDebug>
 #include <QSettings>
 #include <QApplication>
+#include<QRegExp>
 
 DWIDGET_USE_NAMESPACE
 using namespace dcc::accounts;
@@ -121,8 +122,8 @@ void CreateAccountPage::initUsrGroup(QVBoxLayout *layout)
     m_groupListView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_groupListView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_groupListView->setSpacing(1);
-    connect(m_groupListView, &DListView::clicked, this, [=](const QModelIndex &index) {
-        QStandardItem *item = m_groupItemModel->item(index.row() ,index.column());
+    connect(m_groupListView, &DListView::clicked, this, [ = ](const QModelIndex & index) {
+        QStandardItem *item = m_groupItemModel->item(index.row(), index.column());
         Qt::CheckState state = item->checkState();
         if (state == Qt::Checked) {
             item->setCheckState(Qt::Unchecked);
@@ -142,7 +143,7 @@ void CreateAccountPage::initWidgets(QVBoxLayout *layout)
     //~ contents_path /accounts/New Account
     TitleLabel *titleLabel = new TitleLabel(tr("New Account"));
     titleLabel->setAlignment(Qt::AlignCenter);
-    layout->setContentsMargins(0,0,10,0);
+    layout->setContentsMargins(0, 0, 10, 0);
     layout->addSpacing(13);
     layout->addWidget(titleLabel);
 
@@ -177,12 +178,12 @@ void CreateAccountPage::initWidgets(QVBoxLayout *layout)
     connect(m_avatarListWidget, &AvatarListWidget::requestSetAvatar,
             m_avatarListWidget, &AvatarListWidget::setCurrentAvatarChecked);
     connect(m_avatarListWidget, &AvatarListWidget::requestAddNewAvatar,
-    this, [this](dcc::accounts::User *user, const QString &file) {
+    this, [this](dcc::accounts::User * user, const QString & file) {
         Q_UNUSED(user)
         m_avatarListWidget->setCurrentAvatarChecked(file);
     });
 
-    connect(m_nameEdit, &DLineEdit::textEdited, this, [ = ](const QString &str) {
+    connect(m_nameEdit, &DLineEdit::textEdited, this, [ = ](const QString & str) {
         if (m_nameEdit->isAlert()) {
             m_nameEdit->hideAlertMessage();
             m_nameEdit->setAlert(false);
@@ -196,9 +197,9 @@ void CreateAccountPage::initWidgets(QVBoxLayout *layout)
         int idx;
         for (idx = 0; idx < strText.size(); ++idx) {
             if ((strText[idx] >= '0' && strText[idx] <= '9') ||
-                (strText[idx] >= 'a' && strText[idx] <= 'z') ||
-                (strText[idx] >= 'A' && strText[idx] <= 'Z') ||
-                (strText[idx] == '-' || strText[idx] == '_')) {
+                    (strText[idx] >= 'a' && strText[idx] <= 'z') ||
+                    (strText[idx] >= 'A' && strText[idx] <= 'Z') ||
+                    (strText[idx] == '-' || strText[idx] == '_')) {
                 strTemp.append(strText[idx]);
             } else {
                 break;
@@ -212,21 +213,24 @@ void CreateAccountPage::initWidgets(QVBoxLayout *layout)
     });
 
     connect(m_fullnameEdit, &DLineEdit::textEdited, this, [ = ] {
-        if (m_fullnameEdit->isAlert()){
+        if (m_fullnameEdit->isAlert())
+        {
             m_fullnameEdit->hideAlertMessage();
             m_fullnameEdit->setAlert(false);
         }
     });
 
     connect(m_passwdEdit, &DPasswordEdit::textEdited, this, [ = ] {
-        if (m_passwdEdit->isAlert()) {
+        if (m_passwdEdit->isAlert())
+        {
             m_passwdEdit->hideAlertMessage();
             m_passwdEdit->setAlert(false);
         }
     });
 
     connect(m_repeatpasswdEdit, &DPasswordEdit::textEdited, this, [ = ] {
-        if (m_repeatpasswdEdit->isAlert()) {
+        if (m_repeatpasswdEdit->isAlert())
+        {
             m_repeatpasswdEdit->hideAlertMessage();
             m_repeatpasswdEdit->setAlert(false);
         }
@@ -249,7 +253,7 @@ void CreateAccountPage::setModel(UserModel *userModel, User *user)
         return;
     }
     m_groupItemModel->clear();
-    for(QString item : m_userModel->getAllGroups()) {
+    for (QString item : m_userModel->getAllGroups()) {
         GroupItem *it = new GroupItem(item);
         it->setCheckable(false);
         m_groupItemModel->appendRow(it);
@@ -315,7 +319,7 @@ void CreateAccountPage::createUser()
         dlg.setIcon(QIcon::fromTheme("preferences-system"));
         dlg.addButton(tr("Go to Settings"));
         dlg.addButton(tr("Cancel"), true, DDialog::ButtonWarning);
-        connect(&dlg, &DDialog::buttonClicked, this, [this](int idx){
+        connect(&dlg, &DDialog::buttonClicked, this, [this](int idx) {
             if (idx == 0) {
                 Defender *defender = new Defender("com.deepin.defender.hmiscreen",
                                                   "/com/deepin/defender/hmiscreen",
@@ -327,12 +331,42 @@ void CreateAccountPage::createUser()
     }
 }
 
-bool CreateAccountPage::validatePassword(const QString &password)
+QString CreateAccountPage::validatePassword(const QString &password)
 {
-    QString validate_policy = QString("1234567890") + QString("abcdefghijklmnopqrstuvwxyz") +
-                              QString("ABCDEFGHIJKLMNOPQRSTUVWXYZ") + QString("~!@#$%^&*()[]{}\\|/?,.<>");
+    // NOTE(justforlxz): 配置文件由安装器生成，后续改成PAM模块
+    QSettings setting("/etc/deepin/dde.conf", QSettings::IniFormat);
+    setting.beginGroup("Password");
+    const bool strong_password_check = setting.value("STRONG_PASSWORD", false).toBool();
+    const int  password_min_length   = setting.value("PASSWORD_MIN_LENGTH").toInt();
+    const int  password_max_length   = setting.value("PASSWORD_MAX_LENGTH").toInt();
+    const QStringList validate_policy = setting.value("VALIDATE_POLICY").toString().split(";");
+    const int validate_required      = setting.value("VALIDATE_REQUIRED").toInt();
+    QString reversusername;
+    QStringList reversenamelist;
 
-    return containsChar(password, validate_policy);
+    for (int i = m_nameEdit->lineEdit()->text().count() - 1; i > -1; i--) {
+        reversenamelist << m_nameEdit->lineEdit()->text().at(i);
+    }
+    reversusername = reversenamelist.join("");
+
+    if (!strong_password_check) {
+        return "";
+    }
+
+    if (password.size() < password_min_length || password.size() > password_max_length) {
+        return QString(tr("Password must be between %1 and %2 characters")
+                      ).arg(password_min_length).arg(password_max_length);
+    }
+    // NOTE(justforlxz): 转换为set，如果密码中包含了不存在与validate_policy中的字符，相减以后不为空。"[0-9]"[^\w\s]+
+    if (!(password.contains(QRegExp("[0-9]")) && password.contains(QRegExp("[A-Z]"))
+            && password.contains(QRegExp("[a-z]"))
+            && password.contains(QRegExp("((?=[\x21-\x7e]+)[^A-Za-z0-9])")))) {
+        return QString(tr("Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&*()[]{}\\|/?,.<>)"));
+    }
+
+    if (password == m_nameEdit->lineEdit()->text() || password == reversusername)
+        return QString(tr("Password should not be the repeated or reversed username"));
+    return "";
 }
 
 bool CreateAccountPage::containsChar(const QString &password, const QString &validate)
@@ -387,10 +421,17 @@ bool CreateAccountPage::onPasswordEditFinished(DPasswordEdit *edit)
         return false;
     }
 
-    bool result = validatePassword(userpassword);
-    if (!result) {
+//    bool result = validatePassword(userpassword);
+//    if (!result) {
+//        edit->setAlert(true);
+//        edit->showAlertMessage(tr("Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&*()[]{}\\|/?,.<>)"), -1);
+//        return false;
+//    }
+
+    auto res = validatePassword(edit->lineEdit()->text());
+    if (!res.isEmpty()) {
         edit->setAlert(true);
-        edit->showAlertMessage(tr("Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&*()[]{}\\|/?,.<>)"), -1);
+        edit->showAlertMessage(res);
         return false;
     }
 
@@ -425,7 +466,7 @@ bool CreateAccountPage::onNameEditFinished(DLineEdit *edit)
         return false;
     }
 
-    auto checkUserName = [=](const QString &name){
+    auto checkUserName = [ = ](const QString & name) {
         bool ret = false;
         const QString numStr = QString("1234567890");
         for (const QChar &p : name) {
@@ -436,9 +477,9 @@ bool CreateAccountPage::onNameEditFinished(DLineEdit *edit)
         return ret;
     };
 
-    if(!checkUserName(username)) {
+    if (!checkUserName(username)) {
         edit->setAlert(true);
-        edit->showAlertMessage(tr("Your username should not only have numbers"), -1);
+        edit->showAlertMessage(tr("Username cannot be a pure number"), -1);
         return false;
     }
 
