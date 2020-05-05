@@ -542,7 +542,7 @@
     <message>
         <location filename="../src/frame/window/modules/bluetooth/detailpage.cpp" line="108"/>
         <source>Connecting</source>
-        <translation>Yhdistetään</translation>
+        <translation>Yhdistää</translation>
     </message>
 </context>
 <context>
@@ -3913,14 +3913,14 @@
         <location filename="../src/frame/window/modules/power/generalwidget.cpp" line="43"/>
         <location filename="../src/frame/window/modules/power/generalwidget.cpp" line="56"/>
         <source>Password is required to wake up the computer</source>
-        <translation>Tietokoneen herättäminen edellyttää salasanaa</translation>
+        <translation>Tietokoneen herääminen edellyttää salasanan</translation>
         <extra-contents_path>/power/General</extra-contents_path>
     </message>
     <message>
         <location filename="../src/frame/window/modules/power/generalwidget.cpp" line="44"/>
         <location filename="../src/frame/window/modules/power/generalwidget.cpp" line="58"/>
         <source>Password is required to wake up the monitor</source>
-        <translation>Näytön herättämiseen tarvitaan salasana</translation>
+        <translation>Näytön herääminen edellyttää salasanan</translation>
         <extra-contents_path>/power/General</extra-contents_path>
     </message>
 </context>
@@ -4008,7 +4008,7 @@
         <location filename="../src/frame/window/modules/power/usebatterywidget.cpp" line="76"/>
         <location filename="../src/frame/window/modules/power/usebatterywidget.cpp" line="174"/>
         <source>Never</source>
-        <translation>Ei</translation>
+        <translation>Unohda</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/power/usebatterywidget.cpp" line="156"/>
@@ -4068,7 +4068,7 @@
         <location filename="../src/frame/window/modules/power/useelectricwidget.cpp" line="87"/>
         <location filename="../src/frame/window/modules/power/useelectricwidget.cpp" line="198"/>
         <source>Never</source>
-        <translation>Ei</translation>
+        <translation>Unohda</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/power/useelectricwidget.cpp" line="180"/>
@@ -4793,7 +4793,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>%n sovellusen päivity(s) havaittu</numerusform><numerusform> %n sovellusten päivity(s) havaittu</numerusform></translation>
+        <translation><numerusform> %n sovellusten päivityksiä havaittu</numerusform><numerusform>%n sovellusen päivity(s) havaittu</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>Järjestelmän uusi versio ja %n sovellusten päivity(s) saatavilla</numerusform><numerusform>Järjestelmän uusi versio ja %n sovelluksen päivity(s) saatavilla</numerusform></translation>
+        <translation><numerusform>Uusi versio järjestelmästä ja %n sovellusten päivitykset(s) saatavilla</numerusform><numerusform>Järjestelmästä uusi versio ja %n sovelluksen päivity(s) saatavilla</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -5079,7 +5079,7 @@
     <message numerus="yes">
         <location filename="../src/frame/notify/notifydelegate.cpp" line="202"/>
         <source>%n day(s) ago</source>
-        <translation><numerusform>%n päivää(s) sitten</numerusform><numerusform>%n päivää(s) sitten</numerusform></translation>
+        <translation><numerusform>%n päivää sitten</numerusform><numerusform>%n päivää sitten</numerusform></translation>
     </message>
 </context>
 <context>
@@ -5100,7 +5100,7 @@
     <message>
         <location filename="../src/frame/main.cpp" line="76"/>
         <source>Control Center</source>
-        <translation>Hallintakeskus</translation>
+        <translation>Ohjauspaneli</translation>
     </message>
     <message>
         <location filename="../src/frame/window/search/searchwidget.cpp" line="237"/>
@@ -8984,7 +8984,7 @@ Jos toimintoa ei käytetä, näyttö palautetaan %1s jälkeen.</translation>
         <location filename="../src/frame/modules/power/powerwidget.cpp" line="62"/>
         <location filename="../src/frame/modules/power/powerwidget.cpp" line="202"/>
         <source>Never</source>
-        <translation>Ei</translation>
+        <translation>Unohda</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/power/powerwidget.cpp" line="100"/>
@@ -9516,7 +9516,7 @@ Jos toimintoa ei käytetä, näyttö palautetaan %1s jälkeen.</translation>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="271"/>
         <source>New system edition and %n application update(s) detected</source>
-        <translation><numerusform>Järjestelmän uusi versio ja %n sovellusten päivity(s) havaittu</numerusform><numerusform>Järjestelmän uusi versio ja %n sovellusten päivity(s) havaittu</numerusform></translation>
+        <translation><numerusform>Järjestelmän uusi versio ja %n sovelluksen päivity(s) havaittu</numerusform><numerusform>Järjestelmän uusi versio ja %n sovelluksen päivity(s) havaittu</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="278"/>
