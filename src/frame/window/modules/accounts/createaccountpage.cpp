@@ -337,10 +337,11 @@ QString CreateAccountPage::validatePassword(const QString &password)
     QSettings setting("/etc/deepin/dde.conf", QSettings::IniFormat);
     setting.beginGroup("Password");
     const bool strong_password_check = setting.value("STRONG_PASSWORD", false).toBool();
-    const int  password_min_length   = setting.value("PASSWORD_MIN_LENGTH").toInt();
+    //const int  password_min_length   = setting.value("PASSWORD_MIN_LENGTH").toInt();
+    const int  password_min_length =6;  //这里需要最小长度为6，由于华为的需求
     const int  password_max_length   = setting.value("PASSWORD_MAX_LENGTH").toInt();
     const QStringList validate_policy = setting.value("VALIDATE_POLICY").toString().split(";");
-    const int validate_required      = setting.value("VALIDATE_REQUIRED").toInt();
+    const int validate_required = setting.value("VALIDATE_REQUIRED").toInt();
     QString reversusername;
     QStringList reversenamelist;
 
