@@ -358,11 +358,17 @@ QString CreateAccountPage::validatePassword(const QString &password)
                       ).arg(password_min_length).arg(password_max_length);
     }
     // NOTE(justforlxz): 转换为set，如果密码中包含了不存在与validate_policy中的字符，相减以后不为空。"[0-9]"[^\w\s]+
-    if (!(password.contains(QRegExp("[0-9]")) && password.contains(QRegExp("[A-Z]"))
-            && password.contains(QRegExp("[a-z]"))
-            && password.contains(QRegExp("((?=[\x21-\x7e]+)[^A-Za-z0-9])")))) {
-        return QString(tr("Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&*()[]{}\\|/?,.<>)"));
-    }
+    int PassWord_i=0;
+    if(password.contains(QRegExp("[0-9]")))
+         PassWord_i++;
+    if (password.contains(QRegExp("[A-Z]")))
+        PassWord_i++;
+    if (password.contains(QRegExp("[a-z]")))
+        PassWord_i++;
+    if (password.contains(QRegExp("((?=[\x21-\x7e]+)[^A-Za-z0-9])")) || password.contains(" "))
+        PassWord_i++;
+    if (PassWord_i<2)
+        return QString(tr("The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols"));
 
     if (password == m_nameEdit->lineEdit()->text() || password == reversusername)
         return QString(tr("Password should not be the repeated or reversed username"));
