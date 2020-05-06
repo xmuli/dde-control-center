@@ -18,7 +18,7 @@
     <message>
         <location filename="../abrecovery/recoverydialog.cpp" line="264"/>
         <source>Reboot</source>
-        <translation>Neu starten</translation>
+        <translation>Neustarten</translation>
     </message>
     <message>
         <location filename="../abrecovery/recoverydialog.cpp" line="271"/>

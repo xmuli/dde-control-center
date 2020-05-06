@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>بىكار قىلىش</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>يېڭىدىن قۇرۇش</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>گۇرۇپپا</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>يىڭى ھېسابات</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>ئىشلەتكۈچى ئىسمى</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>تولۇق نامى</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>پارول</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>پارولنى تەكرارلاڭ</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>زۆرۈر</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>ئىختىيارىي</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>تەڭشەكلەرگە بېرىش</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>پارول% 1 ھەرپتىن ئېشىپ كەتمەسلىكى كېرەك</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>پارولدا پەقەت ئىنگلىزچە ھەرپلەر (چوڭ-كىچىك) ، سان ياكى ئالاھىدە بەلگىلەر بار (~! @ # $% ^ &amp; * () [] {} \ | /?,. &lt;&gt;)</translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
         <translation>پارول ماس كەلمىدى</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>ئىشلەتكۈچى ئىسمى 3 دىن 32 ھەرپ ئارىلىقىدا بولۇشى كېرەك</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>بىرىنچى ھەرپ چوقۇم بىر ھەرپ ياكى سان بولۇشى كېرەك</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>تولۇق نامى  ئاللىبۇرۇن مەۋجۇت</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>تولۇق ئىسمى بەك ئۇزۇن</translation>
     </message>
@@ -873,7 +883,7 @@
         <location filename="../src/frame/window/modules/datetime/datesettings.cpp" line="353"/>
         <location filename="../src/frame/window/modules/datetime/datesettings.cpp" line="401"/>
         <source>Customize</source>
-        <translation>ئۆزگىچىلەشتۈرۈش</translation>
+        <translation> ئۆزى بەلگىلەش</translation>
     </message>
 </context>
 <context>
@@ -1182,7 +1192,7 @@
     <message>
         <location filename="../src/frame/window/modules/display/multiscreensettingpage.cpp" line="145"/>
         <source>Customize</source>
-        <translation>ئۆزگىچىلەشتۈرۈش</translation>
+        <translation> ئۆزى بەلگىلەش</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/display/multiscreensettingpage.cpp" line="146"/>
@@ -1217,7 +1227,7 @@
     <message>
         <location filename="../src/frame/window/modules/display/rotatedialog.cpp" line="164"/>
         <source>Left click to rotate, right click to restore and exit, press Ctrl+S to save.</source>
-        <translation>سولنى چېكىپ ئايلاندۇرۇڭ،ئوڭنى چېكىپ ئەسلىگە قۇيتۇرۇڭ ۋە چېكىنىڭ، Ctrl+S نى بېسىپ ساقلاڭ.</translation>
+        <translation>سولنى چېكىپ ئايلاندۇرۇڭ،ئوڭنى چېكىپ ئەسلىگە قايتۇرۇڭ ۋە چېكىنىڭ، Ctrl+S نى بېسىپ ساقلاڭ.</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/display/rotatedialog.cpp" line="166"/>
@@ -1431,7 +1441,7 @@
     <message>
         <location filename="../src/frame/window/modules/keyboard/shortcutsettingwidget.cpp" line="68"/>
         <source>Workspace</source>
-        <translation>خىزمەت بوشلۇقى</translation>
+        <translation>خىزمەت رايونى</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/keyboard/shortcutsettingwidget.cpp" line="74"/>
@@ -1503,7 +1513,7 @@
     <message>
         <location filename="../src/frame/window/modules/mouse/generalsettingwidget.cpp" line="48"/>
         <source>Disable touchpad while typing</source>
-        <translation>خەت بېسىۋاتقاندا چەكمە تاختىنى چەكلەڭ</translation>
+        <translation>خەت يېزىۋاتقاندا سېزىمچان تاختا ئىشلىمىسۇن</translation>
         <extra-contents_path>/mouse/General</extra-contents_path>
     </message>
     <message>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation type="unfinished"/>
         <extra-contents_path>/sound/Microphone</extra-contents_path>

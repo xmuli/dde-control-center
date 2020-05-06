@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>作成</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>グループ</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>新しいアカウント</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>ユーザー名</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>フルネーム</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>パスワード</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>パスワードを再入力</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>必須</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>省略可能</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>設定に移動</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>パスワードは %1 文字以上にする必要があります</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>パスワードには英字 (大文字と小文字を区別します)、数字、特殊記号 (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;) のみを使用できます</translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
         <translation>パスワードが一致しません</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>ユーザー名は3文字以上32文字以下にする必要があります</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>最初の文字は英数字にする必要があります</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>フルネームはすでに存在します</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>フルネームが長すぎます</translation>
     </message>
@@ -2180,7 +2190,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/networkmodulewidget.cpp" line="97"/>
         <source>Network Details</source>
-        <translation>ネットワーク詳細</translation>
+        <translation>ネットワークの詳細</translation>
         <extra-contents_path>/network/Network Details</extra-contents_path>
     </message>
     <message>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation>入力レベル</translation>
         <extra-contents_path>/sound/Microphone</extra-contents_path>
@@ -4793,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>%n 件のアプリケーションのアップデートが利用可能です</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4813,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>新しいエディションのシステムと %n 件のアプリケーションのアップデートが利用可能です</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -4948,7 +4958,7 @@
     <message>
         <location filename="../src/frame/window/modules/wacom/pressuresettings.cpp" line="52"/>
         <source>Light</source>
-        <translation>弱い</translation>
+        <translation>ライト</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/wacom/pressuresettings.cpp" line="52"/>
@@ -5079,7 +5089,7 @@
     <message numerus="yes">
         <location filename="../src/frame/notify/notifydelegate.cpp" line="202"/>
         <source>%n day(s) ago</source>
-        <translation><numerusform>%n 日前</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform></translation>
     </message>
 </context>
 <context>
@@ -5528,12 +5538,12 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="418"/>
         <source>AD domain settings</source>
-        <translation type="unfinished"/>
+        <translation>ADドメイン設定</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="487"/>
         <source>Password not match</source>
-        <translation type="unfinished"/>
+        <translation>パスワードが一致しません</translation>
     </message>
 </context>
 <context>
@@ -5847,7 +5857,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="67"/>
         <source>Delete account directory</source>
-        <translation type="unfinished"/>
+        <translation>アカウントのディレクトリを削除</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="73"/>
@@ -5919,7 +5929,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/bluetooth/pincodedialog.cpp" line="41"/>
         <source>The PIN for connecting to the Bluetooth device is:</source>
-        <translation type="unfinished"/>
+        <translation>Bluetoothデバイスに接続するためのPIN:</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/bluetooth/pincodedialog.cpp" line="49"/>
@@ -6031,7 +6041,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sync/syncwidget.cpp" line="18"/>
         <location filename="../src/frame/navigation/navmodel.cpp" line="150"/>
         <source>Cloud Sync</source>
-        <translation type="unfinished"/>
+        <translation>クラウド同期</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sync/syncwidget.cpp" line="21"/>
@@ -6092,7 +6102,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="157"/>
         <location filename="../src/frame/navigationbar.cpp" line="210"/>
         <source>Time and Date</source>
-        <translation type="unfinished"/>
+        <translation>時間と日付</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/datetime/datetime.cpp" line="61"/>
@@ -6126,7 +6136,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/datetime/timezone_dialog/timezonechooser.cpp" line="193"/>
         <source>Add Timezone</source>
-        <translation type="unfinished"/>
+        <translation>タイムゾーンを追加</translation>
         <extra-contents_path>/datetime/Timezone List/Add Timezone</extra-contents_path>
     </message>
     <message>
@@ -6137,7 +6147,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/datetime/timezone_dialog/timezonechooser.cpp" line="196"/>
         <source>Change Timezone</source>
-        <translation type="unfinished"/>
+        <translation>タイムゾーンを変更</translation>
     </message>
 </context>
 <context>
@@ -6145,7 +6155,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/datetime/timezoneitem.cpp" line="108"/>
         <source>Tomorrow</source>
-        <translation type="unfinished"/>
+        <translation>明日</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/datetime/timezoneitem.cpp" line="110"/>
@@ -6375,12 +6385,12 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/monitorcontrolwidget.cpp" line="47"/>
         <source>Recognize</source>
-        <translation type="unfinished"/>
+        <translation>承認</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/monitorcontrolwidget.cpp" line="54"/>
         <source>Split</source>
-        <translation type="unfinished"/>
+        <translation>分割線</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/monitorcontrolwidget.cpp" line="61"/>
@@ -6393,7 +6403,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="107"/>
         <source>Resolution</source>
-        <translation type="unfinished"/>
+        <translation>解像度</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="170"/>
@@ -6408,12 +6418,12 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="179"/>
         <source>Primary</source>
-        <translation type="unfinished"/>
+        <translation>プライマリー</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="346"/>
         <source> (Recommended)</source>
-        <translation type="unfinished"/>
+        <translation>(推奨)</translation>
     </message>
 </context>
 <context>
@@ -6531,7 +6541,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/customedit.cpp" line="122"/>
         <source>This shortcut conflicts with %1, click on Add to make this shortcut effective immediately</source>
-        <translation type="unfinished"/>
+        <translation>このショートカットは %1 と競合します。このショートカットを今すぐ有効にするには、「追加」をクリックしてください</translation>
     </message>
 </context>
 <context>
@@ -6544,7 +6554,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/customitem.cpp" line="112"/>
         <source>Please enter a shortcut</source>
-        <translation type="unfinished"/>
+        <translation>ショートカットを入力してください</translation>
     </message>
 </context>
 <context>
@@ -6571,7 +6581,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/window/modules/keyboard/keyboardlayoutwidget.cpp" line="49"/>
         <source>Add Keyboard Layout</source>
-        <translation type="unfinished"/>
+        <translation>キーボードレイアウトの追加</translation>
         <extra-contents_path>/keyboard/Keyboard Layout</extra-contents_path>
     </message>
     <message>
@@ -6668,7 +6678,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="49"/>
         <source>Please Reset Shortcut</source>
-        <translation type="unfinished"/>
+        <translation>ショートカットをリセットしてください</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="56"/>
@@ -6678,7 +6688,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="57"/>
         <source>Replace</source>
-        <translation type="unfinished"/>
+        <translation>置き換える</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="59"/>
@@ -6742,7 +6752,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/mouse/widget/doutestwidget.cpp" line="45"/>
         <source>Double-click Test</source>
-        <translation type="unfinished"/>
+        <translation>ダブルクリックテスト</translation>
         <extra-contents_path>/mouse/General</extra-contents_path>
     </message>
 </context>
@@ -9016,7 +9026,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="158"/>
         <location filename="../src/frame/navigationbar.cpp" line="211"/>
         <source>Power Management</source>
-        <translation type="unfinished"/>
+        <translation>電力管理</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/power/powerwidget.cpp" line="190"/>
@@ -9075,7 +9085,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="67"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="84"/>
         <source>Boot up</source>
-        <translation type="unfinished"/>
+        <translation>起動</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="68"/>
@@ -9087,7 +9097,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="69"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="86"/>
         <source>Log out</source>
-        <translation type="unfinished"/>
+        <translation>ログアウト</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="70"/>
@@ -9095,7 +9105,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="98"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="99"/>
         <source>Wake up</source>
-        <translation type="unfinished"/>
+        <translation>ウェイクアップ</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="71"/>
@@ -9107,29 +9117,29 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="72"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="89"/>
         <source>Notification</source>
-        <translation type="unfinished"/>
+        <translation>通知</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="73"/>
         <source>Low battery</source>
-        <translation type="unfinished"/>
+        <translation>低バッテリー</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="74"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="90"/>
         <source>Send icon in Launcher to Desktop</source>
-        <translation type="unfinished"/>
+        <translation>ランチャーのアイコンをデスクトップに送る</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="75"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="91"/>
         <source>Empty Trash</source>
-        <translation type="unfinished"/>
+        <translation>ゴミ箱を空にする</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="76"/>
         <source>Plug in</source>
-        <translation type="unfinished"/>
+        <translation>電源に接続</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="77"/>
@@ -9140,19 +9150,19 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="78"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="92"/>
         <source>Removable device connected</source>
-        <translation type="unfinished"/>
+        <translation>リムーバブルデバイスの接続</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="79"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="93"/>
         <source>Removable device removed</source>
-        <translation type="unfinished"/>
+        <translation>リムーバブルデバイスの取り外し</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="80"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="94"/>
         <source>Error</source>
-        <translation type="unfinished"/>
+        <translation>エラー</translation>
     </message>
 </context>
 <context>
@@ -9282,7 +9292,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="163"/>
         <location filename="../src/frame/navigationbar.cpp" line="217"/>
         <source>System Information</source>
-        <translation type="unfinished"/>
+        <translation>システム情報</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/systeminfo/systeminfowidget.cpp" line="81"/>
@@ -9370,7 +9380,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/update/mirroritem.cpp" line="91"/>
         <location filename="../src/frame/modules/update/mirroritem.cpp" line="125"/>
         <source>Timeout</source>
-        <translation type="unfinished"/>
+        <translation>タイムアウト</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/mirroritem.cpp" line="93"/>
@@ -9424,7 +9434,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/update/resultitem.cpp" line="80"/>
         <source>Failed to update</source>
-        <translation type="unfinished"/>
+        <translation>アップデートに失敗しました</translation>
     </message>
 </context>
 <context>
@@ -9444,7 +9454,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="162"/>
         <location filename="../src/frame/navigationbar.cpp" line="216"/>
         <source>Update</source>
-        <translation type="unfinished"/>
+        <translation>アップデート</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="89"/>
@@ -9624,7 +9634,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/update/updatework.cpp" line="350"/>
         <source>Patches</source>
-        <translation type="unfinished"/>
+        <translation>パッチ</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatework.cpp" line="351"/>
@@ -9680,7 +9690,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="161"/>
         <location filename="../src/frame/navigationbar.cpp" line="215"/>
         <source>Wacom</source>
-        <translation type="unfinished"/>
+        <translation>Wacom</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/wacom/wacomwidget.cpp" line="72"/>

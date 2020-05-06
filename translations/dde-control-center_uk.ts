@@ -46,7 +46,7 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="309"/>
         <source>Default Applications</source>
-        <translation>Програми за замовчуванням</translation>
+        <translation>Типові програми</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="310"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="316"/>
         <source>Mouse</source>
-        <translation>Мишка</translation>
+        <translation>Миша</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="317"/>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="318"/>
         <source>Keyboard and Language</source>
-        <translation>Клавіатура і Мова</translation>
+        <translation>Клавіатура і мова</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="319"/>
@@ -105,7 +105,7 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="320"/>
         <source>System Info</source>
-        <translation>Інформація про систему</translation>
+        <translation>Дані щодо системи</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="321"/>
@@ -131,7 +131,7 @@
         <location filename="../src/frame/window/mainwindow.cpp" line="843"/>
         <location filename="../src/frame/window/mainwindow.cpp" line="845"/>
         <source>Cloud Sync</source>
-        <translation>Синхронізація Хмари</translation>
+        <translation>Синхронізація із «хмарою»</translation>
     </message>
 </context>
 <context>
@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>Скасувати</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>Створити</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>Група</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>Новий Обліковий запис</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>Ім&apos;я користувача</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>Повне ім&apos;я</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>Пароль</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>Повторіть Пароль</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>Вимагається</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>необов&apos;язковий</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>Перейти до параметрів</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation>Довжина пароля має перебувати у діапазоні від %1 до %2 символів</translation>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation>Пароль має складатися із принаймні 6 символів і містити символи з принаймні 2 з 4 таких типів: малі літери, прописні літери, цифри та знаки пунктуації</translation>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation>Не варто використовувати як пароль ім&apos;я користувача або ім&apos;я користувача, яке записано у зворотному порядку літер</translation>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>Пароль має складатися з не більше, ніж %1 символів</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>Пароль може складатися лише з літер латиниці (із врахуванням регістру), цифр та спеціальних символів (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
         <translation>Паролі не збігаються</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>Ім&apos;я користувача має містити 3-32 символи</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
-        <translation>Ім&apos;я користувача не може складатися лише з цифр</translation>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
+        <translation>Ім&apos;я користувача не може бути суто числовим</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>Перший символ має бути літерою або цифрою</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>Таке повне ім&apos;я вже існує</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>Ім&apos;я повністю є надто довгим</translation>
     </message>
@@ -1026,7 +1036,7 @@
     <message>
         <location filename="../src/frame/window/modules/defapp/defappwidget.cpp" line="92"/>
         <source>Default Applications</source>
-        <translation>Програми за замовчуванням</translation>
+        <translation>Типові програми</translation>
     </message>
 </context>
 <context>
@@ -1059,7 +1069,7 @@
     <message>
         <location filename="../src/frame/window/modules/display/customsettingdialog.cpp" line="99"/>
         <source>Resolution</source>
-        <translation>Роздільна здатність</translation>
+        <translation>Роздільність</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/display/customsettingdialog.cpp" line="105"/>
@@ -1130,13 +1140,13 @@
     <message>
         <location filename="../src/frame/window/modules/display/displaywidget.cpp" line="130"/>
         <source>Resolution</source>
-        <translation>Роздільна здатність</translation>
+        <translation>Роздільність</translation>
         <extra-contents_path>/display/Resolution</extra-contents_path>
     </message>
     <message>
         <location filename="../src/frame/window/modules/display/displaywidget.cpp" line="135"/>
         <source>Display Scaling</source>
-        <translation>Маштабування дисплею</translation>
+        <translation>Масштабування дисплея</translation>
         <extra-contents_path>/display/Display Scaling</extra-contents_path>
     </message>
     <message>
@@ -1281,7 +1291,7 @@
     <message>
         <location filename="../src/frame/window/modules/keyboard/customcontent.cpp" line="131"/>
         <source>This shortcut conflicts with %1, click on Add to make this shortcut effective immediately</source>
-        <translation>Цей ярлик конфліктує з %1, натисніть «Додати», щоб негайно активувати цей ярлик</translation>
+        <translation>Це скорочення конфліктує з %1, натисніть «Додати», щоб негайно активувати це скорочення</translation>
     </message>
 </context>
 <context>
@@ -1596,7 +1606,7 @@
     <message>
         <location filename="../src/frame/window/modules/mouse/mousewidget.cpp" line="58"/>
         <source>Mouse</source>
-        <translation>Мишка</translation>
+        <translation>Миша</translation>
         <extra-contents_path>/mouse/Mouse</extra-contents_path>
     </message>
     <message>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation>Рівень введення</translation>
         <extra-contents_path>/sound/Microphone</extra-contents_path>
@@ -4649,7 +4659,7 @@
     <message>
         <location filename="../src/frame/window/modules/systeminfo/systemrestore.cpp" line="22"/>
         <source>Restore</source>
-        <translation>Відновлення</translation>
+        <translation>Відновити</translation>
     </message>
 </context>
 <context>
@@ -4657,12 +4667,12 @@
     <message>
         <location filename="../src/frame/window/modules/update/mirrorsourceitem.cpp" line="10"/>
         <source>Untested</source>
-        <translation>Неперевірено</translation>
+        <translation>Не перевірено</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/mirrorsourceitem.cpp" line="80"/>
         <source>Timeout</source>
-        <translation>Час вийшов</translation>
+        <translation>Вичерпано час</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/mirrorsourceitem.cpp" line="82"/>
@@ -4793,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>Виявлено %n оновлення програм</numerusform><numerusform>Виявлено %n оновлення програм</numerusform><numerusform>Виявлено %n оновлення програм</numerusform><numerusform>Виявлено %n оновлення програм</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4813,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -4976,7 +4986,7 @@
     <message>
         <location filename="../src/frame/window/modules/wacom/wacomwidget.cpp" line="68"/>
         <source>Mouse</source>
-        <translation>Мишка</translation>
+        <translation>Миша</translation>
         <extra-contents_path>/wacom/Mouse</extra-contents_path>
     </message>
     <message>
@@ -5079,7 +5089,7 @@
     <message numerus="yes">
         <location filename="../src/frame/notify/notifydelegate.cpp" line="202"/>
         <source>%n day(s) ago</source>
-        <translation><numerusform>%n день(ів) тому</numerusform><numerusform>%n день(ів) тому</numerusform><numerusform>%n день(ів) тому</numerusform><numerusform>%n день(ів) тому</numerusform></translation>
+        <translation><numerusform>%n день тому</numerusform><numerusform>%n дні тому</numerusform><numerusform>%n днів тому</numerusform><numerusform>%n день тому</numerusform></translation>
     </message>
 </context>
 <context>
@@ -5219,7 +5229,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/widgets/settingshead.cpp" line="47"/>
         <location filename="../src/frame/widgets/settingshead.cpp" line="100"/>
         <source>Edit</source>
-        <translation>Редагувати</translation>
+        <translation>Змінити</translation>
     </message>
     <message>
         <location filename="../src/frame/widgets/settingshead.cpp" line="102"/>
@@ -5255,7 +5265,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="18"/>
         <source>Log out</source>
-        <translation>Вихід</translation>
+        <translation>Вийти</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="19"/>
@@ -5280,7 +5290,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="23"/>
         <source>Send icon in Launcher to Desktop</source>
-        <translation>Надіслати піктограму у засобі запуску на стільницю</translation>
+        <translation>Надіслати піктограму в панель запуску на стільницю</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="24"/>
@@ -5542,7 +5552,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/accounts/addfingerpage.cpp" line="42"/>
         <source>Add Fingerprint</source>
-        <translation>Додати відбиток пальця</translation>
+        <translation>Додати відбиток</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/addfingerpage.cpp" line="55"/>
@@ -5703,7 +5713,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/accounts/fingerpage.cpp" line="49"/>
         <source>Add Fingerprint</source>
-        <translation>Додати відбиток пальця</translation>
+        <translation>Додати відбиток</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/fingerpage.cpp" line="52"/>
@@ -5843,12 +5853,12 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="58"/>
         <source>Are you sure you want to delete this account?</source>
-        <translation>Ви справді хочете вилучити цей обліковий запис?</translation>
+        <translation>Ви впевнені, що хочете видалити цей обліковий запис?</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="67"/>
         <source>Delete account directory</source>
-        <translation>Вилучити каталог облікового запису</translation>
+        <translation>Видалити директорію Облікового запису</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="73"/>
@@ -5912,7 +5922,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/bluetooth/devicesettingsitem.cpp" line="130"/>
         <source>Not connected</source>
-        <translation>Не підключено</translation>
+        <translation>Не з&apos;єднано</translation>
     </message>
 </context>
 <context>
@@ -5920,7 +5930,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/bluetooth/pincodedialog.cpp" line="41"/>
         <source>The PIN for connecting to the Bluetooth device is:</source>
-        <translation>Пін-код для з&apos;єднання із пристроєм Bluetooth:</translation>
+        <translation>ПІН-код для підключення Bluetooth пристроїв: </translation>
     </message>
     <message>
         <location filename="../src/frame/modules/bluetooth/pincodedialog.cpp" line="49"/>
@@ -6032,7 +6042,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sync/syncwidget.cpp" line="18"/>
         <location filename="../src/frame/navigation/navmodel.cpp" line="150"/>
         <source>Cloud Sync</source>
-        <translation>Синхронізація із «хмарою»</translation>
+        <translation>Синхронізація Хмари</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sync/syncwidget.cpp" line="21"/>
@@ -6093,7 +6103,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="157"/>
         <location filename="../src/frame/navigationbar.cpp" line="210"/>
         <source>Time and Date</source>
-        <translation>Час і дата</translation>
+        <translation>Час і Дата</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/datetime/datetime.cpp" line="61"/>
@@ -6161,12 +6171,12 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/datetime/timezoneitem.cpp" line="131"/>
         <source>%1 hours earlier than local</source>
-        <translation>На %1 годин відстає від місцевого</translation>
+        <translation>%1 годин раніше за локальний</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/datetime/timezoneitem.cpp" line="133"/>
         <source>%1 hours later than local</source>
-        <translation>На %1 годин випереджає місцевий</translation>
+        <translation>%1 години пізніше за локальний</translation>
     </message>
 </context>
 <context>
@@ -6176,7 +6186,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="152"/>
         <location filename="../src/frame/navigationbar.cpp" line="204"/>
         <source>Default Applications</source>
-        <translation>Типові програми</translation>
+        <translation>Програми за замовчуванням</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/defapp/defappviewer.cpp" line="55"/>
@@ -6233,7 +6243,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/defapp/defappwidget.cpp" line="46"/>
         <location filename="../src/frame/modules/defapp/defappwidget.cpp" line="50"/>
         <source>Default Applications</source>
-        <translation>Типові програми</translation>
+        <translation>Програми за замовчуванням</translation>
     </message>
 </context>
 <context>
@@ -6295,7 +6305,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/displaywidget.cpp" line="49"/>
         <source>Display Scaling</source>
-        <translation>Масштабування дисплея</translation>
+        <translation>Маштабування дисплею</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/displaywidget.cpp" line="57"/>
@@ -6310,7 +6320,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/displaywidget.cpp" line="60"/>
         <source>Resolution</source>
-        <translation>Роздільність</translation>
+        <translation>Роздільна здатність</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/displaywidget.cpp" line="61"/>
@@ -6394,7 +6404,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="107"/>
         <source>Resolution</source>
-        <translation>Роздільність</translation>
+        <translation>Роздільна здатність</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="170"/>
@@ -6422,7 +6432,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/resolutiondetailpage.cpp" line="41"/>
         <source>Resolution</source>
-        <translation>Роздільність</translation>
+        <translation>Роздільна здатність</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/resolutiondetailpage.cpp" line="80"/>
@@ -6440,7 +6450,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/display/scalingpage.cpp" line="62"/>
         <source>Display Scaling</source>
-        <translation>Масштабування дисплея</translation>
+        <translation>Маштабування дисплею</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/scalingpage.cpp" line="86"/>
@@ -6532,7 +6542,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/customedit.cpp" line="122"/>
         <source>This shortcut conflicts with %1, click on Add to make this shortcut effective immediately</source>
-        <translation>Це скорочення конфліктує з %1, натисніть «Додати», щоб негайно активувати це скорочення</translation>
+        <translation>Цей ярлик конфліктує з %1, натисніть «Додати», щоб негайно активувати цей ярлик</translation>
     </message>
 </context>
 <context>
@@ -6545,7 +6555,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/customitem.cpp" line="112"/>
         <source>Please enter a shortcut</source>
-        <translation>Будь ласка, введіть скорочення</translation>
+        <translation>Будь ласка, введіть сполучення клавіш</translation>
     </message>
 </context>
 <context>
@@ -6564,7 +6574,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/keyboarddetails.cpp" line="88"/>
         <source>Add Keyboard Layout</source>
-        <translation>Додати розкладку клавіатури</translation>
+        <translation>Додати Розкладку Клавіатури</translation>
     </message>
 </context>
 <context>
@@ -6572,7 +6582,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/window/modules/keyboard/keyboardlayoutwidget.cpp" line="49"/>
         <source>Add Keyboard Layout</source>
-        <translation>Додати розкладку клавіатури</translation>
+        <translation>Додати Розкладку Клавіатури</translation>
         <extra-contents_path>/keyboard/Keyboard Layout</extra-contents_path>
     </message>
     <message>
@@ -6669,7 +6679,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="49"/>
         <source>Please Reset Shortcut</source>
-        <translation>Будь ласка, скиньте скорочення</translation>
+        <translation>Скидання ярлика</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="56"/>
@@ -6689,7 +6699,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="92"/>
         <source>This shortcut conflicts with  %1, click on Replace to make this shortcut effective immediately</source>
-        <translation>Це скорочення конфліктує з %1, натисніть «Замінити», щоб негайно активувати це скорочення</translation>
+        <translation>Цей ярлик конфліктує з %1, натисніть «Замінити», щоб негайно активувати цей ярлик</translation>
     </message>
 </context>
 <context>
@@ -6697,7 +6707,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutitem.cpp" line="82"/>
         <source>Enter a new shortcut</source>
-        <translation>Введіть нове скорочення</translation>
+        <translation>Введіть новий ярлик</translation>
     </message>
 </context>
 <context>
@@ -6743,7 +6753,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/mouse/widget/doutestwidget.cpp" line="45"/>
         <source>Double-click Test</source>
-        <translation>Двічі клацніть на кнопці «Тест»</translation>
+        <translation>Перевірка подвійного кліку</translation>
         <extra-contents_path>/mouse/General</extra-contents_path>
     </message>
 </context>
@@ -6759,7 +6769,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="159"/>
         <location filename="../src/frame/navigationbar.cpp" line="212"/>
         <source>Mouse</source>
-        <translation>Миша</translation>
+        <translation>Мишка</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/mouse/mousewidget.cpp" line="50"/>
@@ -6852,7 +6862,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/mouse/widget/palmdetectsetting.cpp" line="35"/>
         <location filename="../src/frame/modules/mouse/widget/palmdetectsetting.cpp" line="45"/>
         <source>Minimum Pressure Value</source>
-        <translation>Мінімальне значення тиску</translation>
+        <translation>Мінімальне значення натиску</translation>
         <extra-child_page>Touchpad</extra-child_page>
         <extra-contents_path>/mouse/Touchpad</extra-contents_path>
     </message>
@@ -9088,7 +9098,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="69"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="86"/>
         <source>Log out</source>
-        <translation>Вихід</translation>
+        <translation>Вийти</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="70"/>
@@ -9119,7 +9129,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="74"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="90"/>
         <source>Send icon in Launcher to Desktop</source>
-        <translation>Надіслати піктограму у засобі запуску на стільницю</translation>
+        <translation>Надіслати піктограму в панель запуску на стільницю</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="75"/>
@@ -9219,7 +9229,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/navigationbar.cpp" line="202"/>
         <source>Cloud Sync</source>
-        <translation>Синхронізація із «хмарою»</translation>
+        <translation>Синхронізація Хмари</translation>
     </message>
 </context>
 <context>
@@ -9283,7 +9293,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/navigation/navmodel.cpp" line="163"/>
         <location filename="../src/frame/navigationbar.cpp" line="217"/>
         <source>System Information</source>
-        <translation>Дані щодо системи</translation>
+        <translation>Інформація про систему</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/systeminfo/systeminfowidget.cpp" line="81"/>
@@ -9348,7 +9358,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/window/modules/systeminfo/nativeinfowidget.cpp" line="189"/>
         <source>Copyright© 2019-2020 UnionTech Software Technology Co., LTD</source>
-        <translation>© UnionTech Software Technology Co., LTD, 2019–2020</translation>
+        <translation>© UnionTech Software Technology Co., LTD, 2019-2020</translation>
     </message>
 </context>
 <context>
@@ -9371,7 +9381,7 @@ If no operation, the display will be restored after %1s.</source>
         <location filename="../src/frame/modules/update/mirroritem.cpp" line="91"/>
         <location filename="../src/frame/modules/update/mirroritem.cpp" line="125"/>
         <source>Timeout</source>
-        <translation>Вичерпано час</translation>
+        <translation>Час вийшов</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/mirroritem.cpp" line="93"/>
@@ -9420,12 +9430,12 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/update/resultitem.cpp" line="75"/>
         <source>Update successful</source>
-        <translation>Успішно оновлено</translation>
+        <translation>Успішно оновлено!</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/resultitem.cpp" line="80"/>
         <source>Failed to update</source>
-        <translation>Не вдалося оновити</translation>
+        <translation>Не вдалося оновити.</translation>
     </message>
 </context>
 <context>
@@ -9506,7 +9516,7 @@ If no operation, the display will be restored after %1s.</source>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="264"/>
         <source>%n application update(s) detected</source>
-        <translation><numerusform>Виявлено %n оновлення програми</numerusform><numerusform>Виявлено %n оновлення програм</numerusform><numerusform>Виявлено %n оновлень програм</numerusform><numerusform>Виявлено %n оновлення програм</numerusform></translation>
+        <translation><numerusform>Виявлено %n оновлення програм</numerusform><numerusform>Виявлено %n оновлення програм</numerusform><numerusform>Виявлено %n оновлень програм</numerusform><numerusform>Виявлено %n оновлення програм</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="269"/>
@@ -9516,7 +9526,7 @@ If no operation, the display will be restored after %1s.</source>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="271"/>
         <source>New system edition and %n application update(s) detected</source>
-        <translation><numerusform>Виявлено нову версію системи та %n оновлення програми</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлень програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform></translation>
+        <translation><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлень програм</numerusform><numerusform>Виявлено нову версію системи та %n оновлення програм</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="278"/>
@@ -9625,7 +9635,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/update/updatework.cpp" line="350"/>
         <source>Patches</source>
-        <translation>Латки</translation>
+        <translation>Виправлення</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatework.cpp" line="351"/>
@@ -9648,7 +9658,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/wacom/wacommodepage.cpp" line="38"/>
         <source>Mouse</source>
-        <translation>Миша</translation>
+        <translation>Мишка</translation>
     </message>
 </context>
 <context>
@@ -9686,7 +9696,7 @@ If no operation, the display will be restored after %1s.</source>
     <message>
         <location filename="../src/frame/modules/wacom/wacomwidget.cpp" line="72"/>
         <source>Mouse</source>
-        <translation>Миша</translation>
+        <translation>Мишка</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/wacom/wacomwidget.cpp" line="72"/>

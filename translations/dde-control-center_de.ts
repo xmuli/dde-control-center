@@ -125,7 +125,7 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="410"/>
         <source>Assistive Tools</source>
-        <translation>Unterstützende Werkzeuge</translation>
+        <translation>Unterstützende Tools</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="843"/>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../src/frame/window/modules/accounts/accounntfingeitem.cpp" line="95"/>
         <source>The fingerprint name already exists</source>
-        <translation type="unfinished"/>
+        <translation>Der Fingerabdruckname existiert bereits</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/accounts/accounntfingeitem.cpp" line="130"/>
@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>Erstellen</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>Gruppe </translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>Neues Konto</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>Benutzername</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>Voller Name</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>Passwort</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>Passwort wiederholen</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>Erforderlich</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>optional</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>Gehe zu Einstellungen</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>Das Passwort darf nicht länger als %1 Zeichen sein</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>Das Passwort kann nur normale Buchstaben enthalten (auf Groß - Kleinschreibung achten), Ziffern oder folgende Symbole (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
         <translation>Passwörter stimmen nicht überein</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>Benutzername muss zwischen 3 und 32 Zeichen lang sein</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>Das erste Zeichen muss ein Buchstabe oder eine Zahl sein</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>Der vollständige Name existiert bereits</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>Der vollständige Name ist zu lang</translation>
     </message>
@@ -409,7 +419,7 @@
     <message>
         <location filename="../src/frame/window/modules/accounts/fingerwidget.cpp" line="48"/>
         <source>You can add up to 10 fingerprints</source>
-        <translation type="unfinished"/>
+        <translation>Sie können bis zu 10 Fingerabdrücke hinzufügen</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/accounts/fingerwidget.cpp" line="84"/>
@@ -658,7 +668,7 @@
     <message>
         <location filename="../src/frame/window/modules/commoninfo/commoninfowork.cpp" line="95"/>
         <source>Signature verification failed, unable to get root access</source>
-        <translation>Signaturprüfung fehlgeschlagen, kein Root-Zugang möglich</translation>
+        <translation>Signaturprüfung fehlgeschlagen, kein root-Zugang möglich</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/commoninfo/commoninfowork.cpp" line="232"/>
@@ -2684,7 +2694,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="119"/>
         <source>Shared key</source>
-        <translation type="unfinished"/>
+        <translation>Gemeinsamer Schlüssel</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="120"/>
@@ -3929,7 +3939,7 @@
     <message>
         <location filename="../src/frame/window/modules/power/powermodule.cpp" line="58"/>
         <source>On Battery</source>
-        <translation>Akkubetrieb</translation>
+        <translation>Im Akkubetrieb</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/power/powermodule.cpp" line="73"/>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation>Eingangspegel</translation>
         <extra-contents_path>/sound/Microphone</extra-contents_path>
@@ -4793,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>%n Anwendungsaktualisierungen verfügbar</numerusform><numerusform>%n Anwendungsaktualisierungen verfügbar</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4813,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>Neue Systemedition und %n Anwendungsaktualisierungen sind verfügbar</numerusform><numerusform>Neue Systemedition und %n Anwendungsaktualisierungen sind verfügbar</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -4948,7 +4958,7 @@
     <message>
         <location filename="../src/frame/window/modules/wacom/pressuresettings.cpp" line="52"/>
         <source>Light</source>
-        <translation>Leicht</translation>
+        <translation>Hell</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/wacom/pressuresettings.cpp" line="52"/>
@@ -5105,7 +5115,7 @@
     <message>
         <location filename="../src/frame/window/search/searchwidget.cpp" line="237"/>
         <source>On Battery</source>
-        <translation>Im Akkubetrieb</translation>
+        <translation>Akkubetrieb</translation>
     </message>
     <message>
         <location filename="../src/frame/window/search/searchwidget.cpp" line="238"/>
@@ -5179,7 +5189,7 @@
     <message>
         <location filename="../src/dialogs/reminderdialog.cpp" line="44"/>
         <source>Reboot</source>
-        <translation>Neu starten</translation>
+        <translation>Neustarten</translation>
     </message>
 </context>
 <context>
@@ -5328,7 +5338,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message>
         <location filename="../src/frame/widgets/timeoutdialog.cpp" line="38"/>
         <source>Restore</source>
-        <translation>Zurücksetzen</translation>
+        <translation>Wiederherstellen</translation>
     </message>
     <message>
         <location filename="../src/frame/widgets/timeoutdialog.cpp" line="39"/>
@@ -5642,7 +5652,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="114"/>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="160"/>
         <source>The fingerprint already exists</source>
-        <translation type="unfinished"/>
+        <translation>Der Fingerabdruck existiert bereits</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="115"/>
@@ -5653,7 +5663,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="148"/>
         <source>Moved too fast</source>
-        <translation type="unfinished"/>
+        <translation>Zu schnell bewegt</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="149"/>
@@ -5663,7 +5673,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="152"/>
         <source>Unclear fingerprint</source>
-        <translation type="unfinished"/>
+        <translation>Unscharfer Fingerabdruck</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/fingermodel.cpp" line="153"/>
@@ -5843,7 +5853,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="58"/>
         <source>Are you sure you want to delete this account?</source>
-        <translation>Sind Sie sicher, dass Sie dieses Konto löschen möchten?</translation>
+        <translation>Möchten Sie dieses Konto wirklich löschen?</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="67"/>
@@ -9211,7 +9221,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message>
         <location filename="../src/frame/modules/sound/soundworker.cpp" line="265"/>
         <source>Bluetooth Earphones</source>
-        <translation type="unfinished"/>
+        <translation>Bluetooth-Ohrhörer</translation>
     </message>
 </context>
 <context>
@@ -9445,7 +9455,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
         <location filename="../src/frame/navigation/navmodel.cpp" line="162"/>
         <location filename="../src/frame/navigationbar.cpp" line="216"/>
         <source>Update</source>
-        <translation>Aktualisieren</translation>
+        <translation>Aktualisierung</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="89"/>
@@ -9506,7 +9516,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="264"/>
         <source>%n application update(s) detected</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n Anwendungsaktualisierung(en) entdeckt</numerusform><numerusform>%n Anwendungsaktualisierung(en) entdeckt</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="269"/>
@@ -9516,7 +9526,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="271"/>
         <source>New system edition and %n application update(s) detected</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>Neue Systemversion und %n Aktualisierung(en) für Anwendungen verfügbar</numerusform><numerusform>Neue Systemversion und %n Aktualisierung(en) für Anwendungen verfügbar</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="278"/>
@@ -9612,7 +9622,7 @@ Bei keiner Eingabe werden die Einstellungen in %1s zurückgesetzt.</translation>
         <location filename="../src/frame/modules/update/updateview.cpp" line="40"/>
         <location filename="../src/frame/modules/update/updateview.cpp" line="52"/>
         <source>Update</source>
-        <translation>Aktualisieren</translation>
+        <translation>Aktualisierung</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updateview.cpp" line="45"/>

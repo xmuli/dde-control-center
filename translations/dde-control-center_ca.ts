@@ -46,7 +46,7 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="309"/>
         <source>Default Applications</source>
-        <translation>Aplicacions per defecte</translation>
+        <translation>Aplicacions predeterminades</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="310"/>
@@ -131,7 +131,7 @@
         <location filename="../src/frame/window/mainwindow.cpp" line="843"/>
         <location filename="../src/frame/window/mainwindow.cpp" line="845"/>
         <source>Cloud Sync</source>
-        <translation>Sincronització del núvol</translation>
+        <translation>Sincronització al núvol</translation>
     </message>
 </context>
 <context>
@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>Cancel·la</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>Crea</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>Grup</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>Compte nou</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>Nom d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>Nom complet</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>Contrasenya</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>Repetiu la contrasenya</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>Cal</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>opcional</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>Ves a la configuració</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>La contrasenya no ha de tenir més de %1 caràcters.</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>La contrasenya només pot contenir caràcters en anglès (majúscules o minúscules), números o símbols especials (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;).</translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
-        <translation>Les contrasenyes no coincideixen.</translation>
+        <translation>Les contrasenyes no coincideixen</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>El nom d&apos;usuari ha de tenir de 3 a 32 caràcters de llargada.</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
-        <translation>El nom d’usuari no només hauria de tenir números.</translation>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>El primer caràcter ha de ser una lletra o un número.</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>El nom complet ja existeix.</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>El nom complet és massa llarg.</translation>
     </message>
@@ -948,7 +958,7 @@
     <message>
         <location filename="../src/frame/window/modules/datetime/timezonelist.cpp" line="67"/>
         <source>Add Timezone</source>
-        <translation>Afegiu una zona horària</translation>
+        <translation>Afegeix una zona horària</translation>
         <extra-contents_path>/datetime/Timezone List</extra-contents_path>
     </message>
 </context>
@@ -1026,7 +1036,7 @@
     <message>
         <location filename="../src/frame/window/modules/defapp/defappwidget.cpp" line="92"/>
         <source>Default Applications</source>
-        <translation>Aplicacions per defecte</translation>
+        <translation>Aplicacions predeterminades</translation>
     </message>
 </context>
 <context>
@@ -1281,7 +1291,7 @@
     <message>
         <location filename="../src/frame/window/modules/keyboard/customcontent.cpp" line="131"/>
         <source>This shortcut conflicts with %1, click on Add to make this shortcut effective immediately</source>
-        <translation>Aquesta drecera té conflicte amb %1. Cliqueu a Afegeix per fer que sigui efectiva immediatament.</translation>
+        <translation>Aquesta drecera entra en conflicte amb %1, feu clic a Afegeix per fer aquesta drecera efectiva immediatament</translation>
     </message>
 </context>
 <context>
@@ -2284,7 +2294,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/sections/pppsection.cpp" line="89"/>
         <source>Refuse MSCHAP Authentication</source>
-        <translation>Rebutja l&apos;autenticació d&apos;MSCHAP</translation>
+        <translation>Rebutja l&apos;autenticació MSCHAP</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/sections/pppsection.cpp" line="90"/>
@@ -2491,7 +2501,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/sections/secret8021xsection.cpp" line="176"/>
         <source>Disabled</source>
-        <translation>S&apos;ha desactivat</translation>
+        <translation>Inhabilitat</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/sections/secret8021xsection.cpp" line="177"/>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation>Nivell d&apos;entrada</translation>
         <extra-contents_path>/sound/Microphone</extra-contents_path>
@@ -4630,7 +4640,7 @@
     <message>
         <location filename="../src/frame/window/modules/systeminfo/systeminfowidget.cpp" line="72"/>
         <source>End User License Agreement</source>
-        <translation>Acord de llicència de l&apos;usuari final</translation>
+        <translation>Acord de llicència d&apos;usuari final</translation>
         <extra-contents_path>/systeminfo/End User License Agreement</extra-contents_path>
     </message>
     <message>
@@ -4793,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>%n actualització d&apos;aplicació disponible</numerusform><numerusform>%n actualitzacions d&apos;aplicacions disponibles</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4813,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>Hi ha una edició nova del sistema i %n actualització d&apos;aplicació disponible.</numerusform><numerusform>Hi ha una edició nova del sistema i %n actualitzacions d&apos;aplicacions disponibles.</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -5245,7 +5255,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="16"/>
         <source>Boot up</source>
-        <translation>Inici</translation>
+        <translation>Arrenca</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="17"/>
@@ -5255,7 +5265,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="18"/>
         <source>Log out</source>
-        <translation>Tancament de sessió</translation>
+        <translation>Surt de la sessió</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="19"/>
@@ -5280,7 +5290,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="23"/>
         <source>Send icon in Launcher to Desktop</source>
-        <translation>Envia icona del llançador a l&apos;escriptori</translation>
+        <translation>Icona d&apos;enviament al llançador de l&apos;escriptori</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="24"/>
@@ -5456,7 +5466,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/accounts/accountsdetailwidget.cpp" line="60"/>
         <source>Auto Login</source>
-        <translation>Entrada automàtica</translation>
+        <translation>Entra-hi automàticament.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsdetailwidget.cpp" line="64"/>
@@ -5509,32 +5519,32 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="391"/>
         <source>Your host was removed from the domain server successfully</source>
-        <translation>L&apos;amfitrió s&apos;ha eliminat del servidor de domini correctament</translation>
+        <translation>L&apos;amfitrió s&apos;ha eliminat del servidor de domini correctament.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="392"/>
         <source>Your host joins the domain server successfully</source>
-        <translation>L&apos;amfitrió s&apos;ha afegit al servidor de domini correctament</translation>
+        <translation>L&apos;amfitrió s&apos;ha afegit al servidor de domini correctament.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="414"/>
         <source>Your host failed to leave the domain server</source>
-        <translation>L&apos;amfitrió no ha pogut abandonar el servidor de domini</translation>
+        <translation>L&apos;amfitrió ha fallat abandonar el servidor de domini.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="415"/>
         <source>Your host failed to join the domain server</source>
-        <translation>L&apos;amfitrió no ha pogut afegir-se al servidor de domini</translation>
+        <translation>L&apos;amfitrió ha fallat afegir-se al servidor de domini.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="418"/>
         <source>AD domain settings</source>
-        <translation>Configuració del domini AD</translation>
+        <translation>Paràmetres del domini AD</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="487"/>
         <source>Password not match</source>
-        <translation>La contrasenya no coincideix</translation>
+        <translation>La contrasenya no coincideix.</translation>
     </message>
 </context>
 <context>
@@ -5843,12 +5853,12 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="58"/>
         <source>Are you sure you want to delete this account?</source>
-        <translation>Esteu segur que voleu suprimir aquest compte?</translation>
+        <translation>Segur que voleu eliminar aquest compte?</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="67"/>
         <source>Delete account directory</source>
-        <translation>Suprimeix el directori del compte</translation>
+        <translation>Elimina el directori del compte.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="73"/>
@@ -5920,7 +5930,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/bluetooth/pincodedialog.cpp" line="41"/>
         <source>The PIN for connecting to the Bluetooth device is:</source>
-        <translation>El codi per connectar al dispositiu Bluetooth és:</translation>
+        <translation>El codi per connectar al dispositiu de bluetooth és el següent:</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/bluetooth/pincodedialog.cpp" line="49"/>
@@ -6032,7 +6042,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/modules/sync/syncwidget.cpp" line="18"/>
         <location filename="../src/frame/navigation/navmodel.cpp" line="150"/>
         <source>Cloud Sync</source>
-        <translation>Sincronització al núvol</translation>
+        <translation>Sincronització del núvol</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sync/syncwidget.cpp" line="21"/>
@@ -6086,7 +6096,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/datetime/datetime.cpp" line="51"/>
         <source>Add Timezone</source>
-        <translation>Afegeix una zona horària</translation>
+        <translation>Afegiu una zona horària</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/datetime/datetime.cpp" line="57"/>
@@ -6127,7 +6137,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/datetime/timezone_dialog/timezonechooser.cpp" line="193"/>
         <source>Add Timezone</source>
-        <translation>Afegeix una zona horària</translation>
+        <translation>Afegiu una zona horària</translation>
         <extra-contents_path>/datetime/Timezone List/Add Timezone</extra-contents_path>
     </message>
     <message>
@@ -6161,12 +6171,12 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/datetime/timezoneitem.cpp" line="131"/>
         <source>%1 hours earlier than local</source>
-        <translation>%1 hores abans que la local</translation>
+        <translation>%1 hores més d&apos;hora de la d&apos;aquí.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/datetime/timezoneitem.cpp" line="133"/>
         <source>%1 hours later than local</source>
-        <translation>%1 hores després que la local</translation>
+        <translation>%1 hores més tard que la d&apos;aquí.</translation>
     </message>
 </context>
 <context>
@@ -6176,7 +6186,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/navigation/navmodel.cpp" line="152"/>
         <location filename="../src/frame/navigationbar.cpp" line="204"/>
         <source>Default Applications</source>
-        <translation>Aplicacions predeterminades</translation>
+        <translation>Aplicacions per defecte</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/defapp/defappviewer.cpp" line="55"/>
@@ -6233,7 +6243,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/modules/defapp/defappwidget.cpp" line="46"/>
         <location filename="../src/frame/modules/defapp/defappwidget.cpp" line="50"/>
         <source>Default Applications</source>
-        <translation>Aplicacions predeterminades</translation>
+        <translation>Aplicacions per defecte</translation>
     </message>
 </context>
 <context>
@@ -6409,7 +6419,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="179"/>
         <source>Primary</source>
-        <translation>Primari</translation>
+        <translation>Primària</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/display/monitorsettingdialog.cpp" line="346"/>
@@ -6532,7 +6542,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/keyboard/customedit.cpp" line="122"/>
         <source>This shortcut conflicts with %1, click on Add to make this shortcut effective immediately</source>
-        <translation>Aquesta drecera entra en conflicte amb %1, feu clic a Afegeix per fer aquesta drecera efectiva immediatament</translation>
+        <translation>Aquesta drecera té conflicte amb %1. Cliqueu a Afegeix per fer que sigui efectiva immediatament.</translation>
     </message>
 </context>
 <context>
@@ -6545,7 +6555,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/keyboard/customitem.cpp" line="112"/>
         <source>Please enter a shortcut</source>
-        <translation>Introduïu una drecera</translation>
+        <translation>Si us plau, introduïu una drecera.</translation>
     </message>
 </context>
 <context>
@@ -6564,7 +6574,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/keyboard/keyboarddetails.cpp" line="88"/>
         <source>Add Keyboard Layout</source>
-        <translation>Afegeix una disposició de teclat</translation>
+        <translation>Afegiu una disposició de teclat</translation>
     </message>
 </context>
 <context>
@@ -6572,7 +6582,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/window/modules/keyboard/keyboardlayoutwidget.cpp" line="49"/>
         <source>Add Keyboard Layout</source>
-        <translation>Afegeix una disposició de teclat</translation>
+        <translation>Afegiu una disposició de teclat</translation>
         <extra-contents_path>/keyboard/Keyboard Layout</extra-contents_path>
     </message>
     <message>
@@ -6669,7 +6679,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="49"/>
         <source>Please Reset Shortcut</source>
-        <translation>Restabliu la drecera</translation>
+        <translation>Si us plau, restabliu la drecera.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="56"/>
@@ -6689,7 +6699,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/keyboard/shortcutcontent.cpp" line="92"/>
         <source>This shortcut conflicts with  %1, click on Replace to make this shortcut effective immediately</source>
-        <translation>Aquesta drecera entra en conflicte amb %1, feu clic a Reemplaça per fer efectiva aquesta drecera immediatament</translation>
+        <translation>Aquesta drecera té conflicte amb %1. Cliqueu a Reemplaça per fer que sigui efectiva immediatament.</translation>
     </message>
 </context>
 <context>
@@ -7387,7 +7397,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/network/sections/pppsection.cpp" line="89"/>
         <source>Refuse MSCHAP Authentication</source>
-        <translation>Rebutja l&apos;autenticació MSCHAP</translation>
+        <translation>Rebutja l&apos;autenticació d&apos;MSCHAP</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/sections/pppsection.cpp" line="90"/>
@@ -7445,7 +7455,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/network/pppoepage.cpp" line="52"/>
         <source>Create PPPoE Connection</source>
-        <translation>Crea una connexió PPPoE</translation>
+        <translation>Crea una connexió de PPPoE</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/pppoepage.cpp" line="66"/>
@@ -8223,7 +8233,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/modules/network/sections/vpn/vpnpppsection.cpp" line="149"/>
         <source>Refuse MSCHAP Authentication</source>
-        <translation>Rebutja l&apos;autenticació MSCHAP</translation>
+        <translation>Rebutja l&apos;autenticació d&apos;MSCHAP</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/sections/vpn/vpnpppsection.cpp" line="150"/>
@@ -9017,7 +9027,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/navigation/navmodel.cpp" line="158"/>
         <location filename="../src/frame/navigationbar.cpp" line="211"/>
         <source>Power Management</source>
-        <translation>Gestió d&apos;energia</translation>
+        <translation>Gestió de l&apos;energia</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/power/powerwidget.cpp" line="190"/>
@@ -9076,7 +9086,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="67"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="84"/>
         <source>Boot up</source>
-        <translation>Inici</translation>
+        <translation>Arrenca</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="68"/>
@@ -9088,7 +9098,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="69"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="86"/>
         <source>Log out</source>
-        <translation>Tancament de sessió</translation>
+        <translation>Surt de la sessió</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="70"/>
@@ -9119,7 +9129,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="74"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="90"/>
         <source>Send icon in Launcher to Desktop</source>
-        <translation>Envia icona del llançador a l&apos;escriptori</translation>
+        <translation>Icona d&apos;enviament al llançador de l&apos;escriptori</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="75"/>
@@ -9219,7 +9229,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/navigationbar.cpp" line="202"/>
         <source>Cloud Sync</source>
-        <translation>Sincronització al núvol</translation>
+        <translation>Sincronització del núvol</translation>
     </message>
 </context>
 <context>
@@ -9348,7 +9358,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message>
         <location filename="../src/frame/window/modules/systeminfo/nativeinfowidget.cpp" line="189"/>
         <source>Copyright© 2019-2020 UnionTech Software Technology Co., LTD</source>
-        <translation>Drets d&apos;autor© 2019-2020 UnionTech Software Technology Co., LTD</translation>
+        <translation>Copyright© 2019-2020 UnionTech Software Technology Co., LTD</translation>
     </message>
 </context>
 <context>
@@ -9516,7 +9526,7 @@ Si no es fa res, la pantalla es restaurarà al cap de %1s.</translation>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="271"/>
         <source>New system edition and %n application update(s) detected</source>
-        <translation><numerusform>S&apos;ha detectat una edició nova del sistema i %n actualització d&apos;aplicació.</numerusform><numerusform>S&apos;han detectat una edició nova del sistema i %n actualitzacions d&apos;aplicacions.</numerusform></translation>
+        <translation><numerusform>S&apos;han detectat una edició nova del sistema i %n actualització d&apos;aplicació.</numerusform><numerusform>S&apos;han detectat una edició nova del sistema i %n actualitzacions d&apos;aplicacions.</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="278"/>

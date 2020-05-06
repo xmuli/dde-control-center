@@ -90,7 +90,7 @@
         <location filename="../src/frame/window/mainwindow.cpp" line="831"/>
         <location filename="../src/frame/window/mainwindow.cpp" line="833"/>
         <source>Drawing Tablet</source>
-        <translation>Scrivi un testo</translation>
+        <translation>Tavoletta grafica</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="318"/>
@@ -125,13 +125,13 @@
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="410"/>
         <source>Assistive Tools</source>
-        <translation>Strumenti di assistenza</translation>
+        <translation>Tecnologie assistive</translation>
     </message>
     <message>
         <location filename="../src/frame/window/mainwindow.cpp" line="843"/>
         <location filename="../src/frame/window/mainwindow.cpp" line="845"/>
         <source>Cloud Sync</source>
-        <translation>Sincronizzazione via Cloud</translation>
+        <translation>Sincronizzazione Cloud</translation>
     </message>
 </context>
 <context>
@@ -197,7 +197,7 @@
     <message>
         <location filename="../src/frame/window/modules/accounts/accountsdetailwidget.cpp" line="386"/>
         <source>Auto Login</source>
-        <translation>Auto login</translation>
+        <translation>Login automatico</translation>
         <extra-contents_path>/accounts/Accounts Detail</extra-contents_path>
     </message>
     <message>
@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>Crea</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>Gruppo</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>Nuovo Account</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>Nome utente </translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>Nome completo</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>Password</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>Ripeti Password</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>Richiesta</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>Opzionale</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>Vai alle impostazioni</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation>La lunghezza della password dovrebbe essere tra %1 e %2 caratteri</translation>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation>La password deve contenere almeno 6 caratteri ed almeno 2 delle quattro tipologie di caratteri seguenti: lettere minuscole, lettere maiuscole, numeri e simboli.</translation>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation>La password non deve ripersi oppure risultare simile al nome utente</translation>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>La password non può superare %1 caratteri</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>La password deve contenere lettere Italiane (case-sensitive), numeri o caratteri speciali (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;) </translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
         <translation>La password non corrisponde</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>L&apos;username deve esser compresa tra 3 e 32 caratteri</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
-        <translation>Il nome utente non dovrebbe contenere solo numeri</translation>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
+        <translation>L&apos;username non può essere solo numerico</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>Il primo carattere deve essere una lettera o un numero</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>Il nome completo esiste già</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>Il nome completo è troppo lungo</translation>
     </message>
@@ -1436,7 +1446,7 @@
     <message>
         <location filename="../src/frame/window/modules/keyboard/shortcutsettingwidget.cpp" line="74"/>
         <source>Assistive Tools</source>
-        <translation>Strumenti di assistenza</translation>
+        <translation>Tecnologie assistive</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/keyboard/shortcutsettingwidget.cpp" line="88"/>
@@ -1630,7 +1640,7 @@
     <message>
         <location filename="../src/frame/window/modules/mouse/touchpadsettingwidget.cpp" line="50"/>
         <source>Natural Scrolling</source>
-        <translation>Scroll naturale</translation>
+        <translation>Scorrimento naturale</translation>
         <extra-child_page>Touchpad</extra-child_page>
         <extra-contents_path>/mouse/Touchpad</extra-contents_path>
     </message>
@@ -2689,7 +2699,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="120"/>
         <source>Open system</source>
-        <translation>Apri Sistema</translation>
+        <translation>Apri la cartella System</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="126"/>
@@ -2704,7 +2714,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="149"/>
         <source>Authentication</source>
-        <translation>Autentificazione</translation>
+        <translation>Autenticazione</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="202"/>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation>Livello input</translation>
         <extra-contents_path>/sound/Microphone</extra-contents_path>
@@ -4630,7 +4640,7 @@
     <message>
         <location filename="../src/frame/window/modules/systeminfo/systeminfowidget.cpp" line="72"/>
         <source>End User License Agreement</source>
-        <translation>Termini e condizioni generali Utente</translation>
+        <translation>Licenza d&apos;uso</translation>
         <extra-contents_path>/systeminfo/End User License Agreement</extra-contents_path>
     </message>
     <message>
@@ -4793,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>%n aggiornamento(i) di App disponibili</numerusform><numerusform>%n aggiornamento(i) di App disponibili</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4813,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>Nuova versione di Sistema e %n aggiornamento(i) di App</numerusform><numerusform>Nuova versione di Sistema e %n aggiornamento(i) di App</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -5100,7 +5110,7 @@
     <message>
         <location filename="../src/frame/main.cpp" line="76"/>
         <source>Control Center</source>
-        <translation>Control Center</translation>
+        <translation>Centro di Controllo</translation>
     </message>
     <message>
         <location filename="../src/frame/window/search/searchwidget.cpp" line="237"/>
@@ -5285,12 +5295,12 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="24"/>
         <source>Empty Trash</source>
-        <translation>Pulizia del Cestino</translation>
+        <translation>Cestino vuoto</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="25"/>
         <source>Plug in</source>
-        <translation>Collegato alla rete elettrica</translation>
+        <translation>Collegato alla rete</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="26"/>
@@ -5300,12 +5310,12 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="27"/>
         <source>Removable device connected</source>
-        <translation>Collegamento dispositivi removibili</translation>
+        <translation>Dispositivi removibili collegati</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="28"/>
         <source>Removable device removed</source>
-        <translation>Rimozione dispositivi removibili</translation>
+        <translation>Dispositivi removibili scollegati</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="29"/>
@@ -5328,7 +5338,7 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/widgets/timeoutdialog.cpp" line="38"/>
         <source>Restore</source>
-        <translation>Ripristina</translation>
+        <translation>Ripristino</translation>
     </message>
     <message>
         <location filename="../src/frame/widgets/timeoutdialog.cpp" line="39"/>
@@ -5529,7 +5539,7 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="418"/>
         <source>AD domain settings</source>
-        <translation>Impostazioni Dominio AD</translation>
+        <translation>Impostazioni Dominio AD.</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/accountsworker.cpp" line="487"/>
@@ -5848,7 +5858,7 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="67"/>
         <source>Delete account directory</source>
-        <translation>Elimina directory dell&apos;account</translation>
+        <translation>Elimina directory account</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/removeuserdialog.cpp" line="73"/>
@@ -6564,7 +6574,7 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/modules/keyboard/keyboarddetails.cpp" line="88"/>
         <source>Add Keyboard Layout</source>
-        <translation>Aggiungi un layout della tastiera</translation>
+        <translation>Aggiungi layout tastiera</translation>
     </message>
 </context>
 <context>
@@ -6572,7 +6582,7 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
     <message>
         <location filename="../src/frame/window/modules/keyboard/keyboardlayoutwidget.cpp" line="49"/>
         <source>Add Keyboard Layout</source>
-        <translation>Aggiungi un layout della tastiera</translation>
+        <translation>Aggiungi layout tastiera</translation>
         <extra-contents_path>/keyboard/Keyboard Layout</extra-contents_path>
     </message>
     <message>
@@ -6812,7 +6822,7 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
         <location filename="../src/frame/modules/mouse/mousewidget.cpp" line="62"/>
         <location filename="../src/frame/modules/mouse/mousewidget.cpp" line="66"/>
         <source>Natural Scrolling</source>
-        <translation>Scorrimento naturale</translation>
+        <translation>Scroll naturale</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/mouse/mousewidget.cpp" line="65"/>
@@ -9125,12 +9135,12 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="75"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="91"/>
         <source>Empty Trash</source>
-        <translation>Pulizia del Cestino</translation>
+        <translation>Cestino vuoto</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="76"/>
         <source>Plug in</source>
-        <translation>Collegato alla rete elettrica</translation>
+        <translation>Collegato alla rete</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="77"/>
@@ -9141,13 +9151,13 @@ In caso di mancata conferma, lo schermo sarà ripristinato dopo %1s.</translatio
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="78"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="92"/>
         <source>Removable device connected</source>
-        <translation>Collegamento dispositivi removibili</translation>
+        <translation>Dispositivi removibili collegati</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="79"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="93"/>
         <source>Removable device removed</source>
-        <translation>Rimozione dispositivi removibili</translation>
+        <translation>Dispositivi removibili scollegati</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="80"/>

@@ -14,7 +14,7 @@
     <message>
         <location filename="../src/dialogs/reminderdialog.cpp" line="45"/>
         <source>Cancel</source>
-        <translation>रद्द गर्नुहोस्</translation>
+        <translation>रद्द </translation>
     </message>
     <message>
         <location filename="../src/dialogs/reminderdialog.cpp" line="45"/>

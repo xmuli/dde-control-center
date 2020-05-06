@@ -144,7 +144,7 @@
     <message>
         <location filename="../src/frame/window/modules/accounts/accounntfingeitem.cpp" line="130"/>
         <source>The name must only contain letters, numbers and underline, and no more than 15 characters.</source>
-        <translation>El nombre solo debe contener letras, números y guión bajo, y no más de 15 caracteres.</translation>
+        <translation>El nombre solo debe contener letras, números, guión bajo y no más de 15 caracteres.</translation>
     </message>
 </context>
 <context>
@@ -259,7 +259,7 @@
         <location filename="../src/frame/window/modules/accounts/addfingedialog.cpp" line="89"/>
         <location filename="../src/frame/window/modules/accounts/addfingedialog.cpp" line="129"/>
         <source>Done</source>
-        <translation>Hecho</translation>
+        <translation>Finalizar</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/accounts/addfingedialog.cpp" line="91"/>
@@ -294,101 +294,111 @@
 <context>
     <name>dccV20::accounts::CreateAccountPage</name>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="86"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="317"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="321"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="87"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="88"/>
         <source>Create</source>
         <translation>Crear</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="134"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="135"/>
         <source>Group</source>
         <translation>Grupo</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="143"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="144"/>
         <source>New Account</source>
         <translation>Nueva cuenta</translation>
         <extra-contents_path>/accounts/New Account</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="157"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="158"/>
         <source>Username</source>
         <translation>Nombre de usuario</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="162"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="163"/>
         <source>Full Name</source>
         <translation>Nombre completo</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="167"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="168"/>
         <source>Password</source>
         <translation>Contraseña</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="172"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="173"/>
         <source>Repeat Password</source>
         <translation>Repita la contraseña</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="235"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="237"/>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="238"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="239"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="241"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="242"/>
         <source>Required</source>
         <translation>Requerido</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="236"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="240"/>
         <source>optional</source>
         <translation>opcional</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="316"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="320"/>
         <source>Go to Settings</source>
         <translation>Ir a ajustes</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="386"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="357"/>
+        <source>Password must be between %1 and %2 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="371"/>
+        <source>The password must have at least 6 characters, and contain at least 2 of the four available character types: lowercase letters, uppercase letters, numbers, and symbols</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="374"/>
+        <source>Password should not be the repeated or reversed username</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="426"/>
         <source>Password must be no more than %1 characters</source>
         <translation>La contraseña no debe tener más de %1 de caracteres</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="393"/>
-        <source>Password can only contain English letters (case-sensitive), numbers or special symbols (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</source>
-        <translation>En la contraseña solo use letras sin tilde (distingue mayúsculas y minúsculas), números o símbolos especiales (~!@#$%^&amp;*()[]{}\|/?,.&lt;&gt;)</translation>
-    </message>
-    <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="400"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="447"/>
         <source>Passwords do not match</source>
         <translation>Las contraseñas no coinciden</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="424"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="471"/>
         <source>Username must be between 3 and 32 characters</source>
         <translation>El nombre de usuario debe tener entre 3 y 32 caracteres</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="441"/>
-        <source>Your username should not only have numbers</source>
-        <translation>Su nombre de usuario no sólo debe tener números</translation>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="488"/>
+        <source>Username cannot be a pure number</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="448"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="495"/>
         <source>The first character must be a letter or number</source>
         <translation>El primer carácter debe ser una letra o número</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="466"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="513"/>
         <source>The full name already exists</source>
         <translation>El nombre completo ya existe</translation>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="473"/>
+        <location filename="../src/frame/window/modules/accounts/createaccountpage.cpp" line="520"/>
         <source>The full name is too long</source>
         <translation>El nombre completo es muy largo</translation>
     </message>
@@ -618,7 +628,7 @@
     <message>
         <location filename="../src/frame/window/modules/commoninfo/commoninfowidget.cpp" line="83"/>
         <source>User Experience Program</source>
-        <translation>Experiencia de usuario</translation>
+        <translation>Programa de experiencia de usuario</translation>
         <extra-contents_path>/commoninfo/User Experience Program</extra-contents_path>
     </message>
     <message>
@@ -1387,7 +1397,7 @@
     <message>
         <location filename="../src/frame/window/modules/keyboard/keyboardmodule.cpp" line="238"/>
         <source>Custom Shortcut</source>
-        <translation>Atajo de teclado personalizado</translation>
+        <translation>Atajos personalizados</translation>
     </message>
 </context>
 <context>
@@ -1670,7 +1680,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/chainsproxypage.cpp" line="49"/>
         <source>Application Proxy</source>
-        <translation>Proxy para aplicaciones</translation>
+        <translation>Proxy para la aplicación</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/chainsproxypage.cpp" line="52"/>
@@ -2174,7 +2184,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/networkmodulewidget.cpp" line="89"/>
         <source>Application Proxy</source>
-        <translation>Proxy para aplicaciones</translation>
+        <translation>Proxy para la aplicación</translation>
         <extra-contents_path>/network/Application Proxy</extra-contents_path>
     </message>
     <message>
@@ -2704,7 +2714,7 @@
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="149"/>
         <source>Authentication</source>
-        <translation type="unfinished"/>
+        <translation>Autenticación</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/network/sections/secretwirelesssection.cpp" line="202"/>
@@ -3859,7 +3869,7 @@
     <message>
         <location filename="../src/frame/window/modules/personalization/personalizationthemelist.cpp" line="104"/>
         <source>Auto</source>
-        <translation>Automático</translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/personalization/personalizationthemelist.cpp" line="109"/>
@@ -4208,7 +4218,7 @@
         <extra-contents_path>/sound/Microphone</extra-contents_path>
     </message>
     <message>
-        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="141"/>
+        <location filename="../src/frame/window/modules/sound/microphonepage.cpp" line="143"/>
         <source>Input Level</source>
         <translation>Nivel de entrada</translation>
         <extra-contents_path>/sound/Microphone</extra-contents_path>
@@ -4778,7 +4788,7 @@
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="306"/>
         <source>Dependency error, failed to detect the updates</source>
-        <translation>Error de dependencias, no se detectaron las actualizaciones.</translation>
+        <translation>Error de dependencia, no se detectaron las actualizaciones.</translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="313"/>
@@ -4793,7 +4803,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="341"/>
         <source>%n application update(s) available</source>
-        <translation><numerusform>actualización de %n aplicación detectada</numerusform><numerusform>%n actualizaciones de aplicaciones detectadas</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="346"/>
@@ -4803,7 +4813,7 @@
     <message numerus="yes">
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="348"/>
         <source>New system edition and %n application update(s) available</source>
-        <translation><numerusform>Nueva edición del sistema y %n actualización de aplicación disponible</numerusform><numerusform>Nueva edición del sistema y %n actualizacion(es) de aplicación disponibles</numerusform></translation>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/window/modules/update/updatectrlwidget.cpp" line="355"/>
@@ -5079,7 +5089,7 @@
     <message numerus="yes">
         <location filename="../src/frame/notify/notifydelegate.cpp" line="202"/>
         <source>%n day(s) ago</source>
-        <translation><numerusform>Hace %n día</numerusform><numerusform>Hace %n días</numerusform></translation>
+        <translation><numerusform>Hace %n día</numerusform><numerusform>Hace %n dia(s)</numerusform></translation>
     </message>
 </context>
 <context>
@@ -5135,7 +5145,7 @@
     <message>
         <location filename="../src/frame/window/search/searchwidget.cpp" line="243"/>
         <source>Application Proxy</source>
-        <translation>Proxy para la aplicación</translation>
+        <translation>Proxy para aplicaciones</translation>
     </message>
     <message>
         <location filename="../src/frame/window/search/searchwidget.cpp" line="244"/>
@@ -5224,7 +5234,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/widgets/settingshead.cpp" line="102"/>
         <source>Done</source>
-        <translation>Finalizar</translation>
+        <translation>Hecho</translation>
     </message>
 </context>
 <context>
@@ -5260,7 +5270,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="19"/>
         <source>Wake up</source>
-        <translation>Despertar</translation>
+        <translation>Wake up</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundeffectpage.cpp" line="20"/>
@@ -5346,7 +5356,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/updatenotifier.cpp" line="162"/>
         <source>Dependency error, failed to detect the updates</source>
-        <translation>Error de dependencia, no se detectaron las actualizaciones.</translation>
+        <translation>Error de dependencias, no se detectaron las actualizaciones.</translation>
     </message>
     <message>
         <location filename="../src/frame/updatenotifier.cpp" line="165"/>
@@ -5552,7 +5562,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/accounts/addfingerpage.cpp" line="56"/>
         <source>Done</source>
-        <translation>Finalizar</translation>
+        <translation>Hecho</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/accounts/addfingerpage.cpp" line="108"/>
@@ -6867,7 +6877,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/network/chainsproxypage.cpp" line="46"/>
         <source>Application Proxy</source>
-        <translation>Proxy para la aplicación</translation>
+        <translation>Proxy para aplicaciones</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/chainsproxypage.cpp" line="49"/>
@@ -7113,7 +7123,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
         <location filename="../src/frame/modules/network/sections/ipvxsection.cpp" line="215"/>
         <location filename="../src/frame/modules/network/sections/ipvxsection.cpp" line="220"/>
         <source>Auto</source>
-        <translation>Auto</translation>
+        <translation>Automático</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/sections/ipvxsection.cpp" line="216"/>
@@ -7268,7 +7278,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/network/networkmodulewidget.cpp" line="67"/>
         <source>Application Proxy</source>
-        <translation>Proxy para la aplicación</translation>
+        <translation>Proxy para aplicaciones</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/networkmodulewidget.cpp" line="70"/>
@@ -7478,7 +7488,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/network/proxypage.cpp" line="63"/>
         <source>Auto</source>
-        <translation>Auto</translation>
+        <translation>Automático</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/network/proxypage.cpp" line="68"/>
@@ -9096,7 +9106,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="98"/>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="99"/>
         <source>Wake up</source>
-        <translation>Despertar</translation>
+        <translation>Wake up</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/sound/soundmodel.cpp" line="71"/>
@@ -9303,7 +9313,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/systeminfo/systeminfowidget.cpp" line="95"/>
         <source>Type:</source>
-        <translation>Tipo:</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/systeminfo/systeminfowidget.cpp" line="98"/>
@@ -9445,7 +9455,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
         <location filename="../src/frame/navigation/navmodel.cpp" line="162"/>
         <location filename="../src/frame/navigationbar.cpp" line="216"/>
         <source>Update</source>
-        <translation>Actualización</translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="89"/>
@@ -9501,12 +9511,12 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="242"/>
         <source>Dependency error, failed to detect the updates</source>
-        <translation>Error de dependencia, no se detectaron las actualizaciones.</translation>
+        <translation>Error de dependencias, no se detectaron las actualizaciones.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="264"/>
         <source>%n application update(s) detected</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>%n actualización de aplicación detectadas</numerusform><numerusform>%n actualizacion(es) de aplicación detectadas</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="269"/>
@@ -9516,7 +9526,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
     <message numerus="yes">
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="271"/>
         <source>New system edition and %n application update(s) detected</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation><numerusform>Se han detectado nueva edición sistema y %n actualización de aplicación.</numerusform><numerusform>Se han detectado nueva edición sistema y %n actualizacion(es) de aplicación.</numerusform></translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updatectrlwidget.cpp" line="278"/>
@@ -9612,7 +9622,7 @@ Si no se realiza ninguna acción, la pantalla se restaurará después de %1s.</t
         <location filename="../src/frame/modules/update/updateview.cpp" line="40"/>
         <location filename="../src/frame/modules/update/updateview.cpp" line="52"/>
         <source>Update</source>
-        <translation>Actualización</translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../src/frame/modules/update/updateview.cpp" line="45"/>
