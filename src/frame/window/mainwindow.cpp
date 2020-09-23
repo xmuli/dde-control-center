@@ -367,12 +367,13 @@ void MainWindow::initAllModule(const QString &m)
     //通过gsetting设置某模块是否显示,默认都显示
     m_moduleSettings = new QGSettings("com.deepin.dde.control-center", QByteArray(), this);
 
-    auto listModule =  m_moduleSettings->get(GSETTINGS_HIDE_MODULE).toStringList();
-    for (auto i : m_modules) {
-        if (listModule.contains((i.first->name()))) {
-            setModuleVisible(i.first, false);
+    connect(m_moduleSettings, &QGSettings::changed, this, [&] (const QString &keyName){
+        if (keyName != "hideModule" && keyName != GSETTINGS_HIDE_MODULE) {
+            return;
         }
-    }
+        updateModuleVisible();
+    });
+    updateModuleVisible();
 
     bool isIcon = m_contentStack.empty();
 
@@ -426,6 +427,18 @@ void MainWindow::initAllModule(const QString &m)
         m_searchWidget->setLanguage(QLocale::system().name());
         qDebug() << QString("load search info with %1ms").arg(et.elapsed());
     });
+}
+
+void MainWindow::updateModuleVisible()
+{
+    auto listModule =  m_moduleSettings->get(GSETTINGS_HIDE_MODULE).toStringList();
+    for (auto i : m_modules) {
+        if (listModule.contains((i.first->name()))) {
+            setModuleVisible(i.first, false);
+        } else {
+            setModuleVisible(i.first, true);
+        }
+    }
 }
 
 void MainWindow::loadModules()
